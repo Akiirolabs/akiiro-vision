@@ -3,11 +3,11 @@
 import { useEffect, useMemo, useState } from "react";
 
 const works = [
-  { src: "/assets/atlas-car.gif", title: "Atlas / Motion", tag: "Agent" },
-  { src: "/assets/mind-map.png", title: "Thought, visible", tag: "Mind map" },
-  { src: "/assets/studio-camera.gif", title: "Directed motion", tag: "Studio" },
+  { src: "/assets/atlas-car.gif", title: "Thought in Motion", tag: "Agent" },
+  { src: "/assets/mind-map.png", title: "Akiiro Map App", tag: "Mind map" },
+  { src: "/assets/studio-camera.gif", title: "CyberDecks", tag: "Studio" },
   { src: "/assets/atlas-one.jpg", title: "A new colleague", tag: "Atlas" },
-  { src: "/assets/product-shot.png", title: "Objects of thought", tag: "Product" },
+  { src: "/assets/product-shot.png", title: "CyberDeck Studio-A", tag: "Product" },
   { src: "/assets/labs-cycle.gif", title: "Endless iteration", tag: "Labs" },
 ];
 
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">A spatial interface for human imagination</p>
           <h1>Ideas deserve<br /><em>dimension.</em></h1>
-          <p className="intro">Akiiro is a Software Development Agency on a mission to empower creative thinkers with the tools they need. Akiiro 3D is an intelligent environment for seeing, shaping, and sharing what comes next.</p>
+          <p className="intro">Akiiro is a Software Development Agency on a mission to empower creatives.</p>
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
@@ -70,16 +70,16 @@ export default function Home() {
 
       <section className="manifesto" id="manifesto">
         <div className="section-label">01 / Manifesto</div>
-        <p>Most tools ask you to think in straight lines.</p>
-        <h2>We built one for the way your mind <span>actually moves.</span></h2>
-        <div className="manifesto-note">Not another canvas. A living field where ideas recognize each other.</div>
+        <p>Designed for the creative.</p>
+        <h2>Built for the way your mind <span>actually moves.</span></h2>
+        <div className="manifesto-note">A living field where ideas recognize each other.</div>
       </section>
 
       <section className="objects" id="objects">
         <div className="section-label light">02 / Selected objects</div>
         <div className="gallery-stage">
           <div className="gallery-copy">
-            <div className="gallery-number">0{active + 1}<sup>/06</sup></div>
+            <div className="gallery-number">0{active + 1}<sup>/06</sup></div>l
             <p>{selected.tag}</p>
             <h2>{selected.title}</h2>
             <div className="gallery-controls">
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           <div className="gallery-image" key={selected.src}>
             <img src={selected.src} alt={selected.title} />
-            <span>Drag your attention</span>
+            <span>A K I I R O </span>
           </div>
         </div>
         <div className="gallery-strip">
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="section-label">03 / The system</div>
         <div className="system-heading"><h2>One space.<br />Every scale.</h2><p>Move from a half-formed thought to a shared world without changing the way you think.</p></div>
         <div className="system-grid">
-          {[['01', 'Capture', 'Collect the spark before it disappears.'], ['02', 'Connect', 'Let relationships reveal themselves.'], ['03', 'Compose', 'Shape complexity into something clear.'], ['04', 'Release', 'Turn understanding into momentum.']].map((item) => (
+          {[['01', 'Capture', 'Collect the spark before it disappears.'], ['02', 'Connect', 'We Build Apps that integrate with each other and other external tools.'], ['03', 'Compose', 'Shape complexity into something clear.'], ['04', 'Release', 'Turn understanding into momentum.']].map((item) => (
             <article key={item[0]}><small>{item[0]}</small><div className="pulse" /><h3>{item[1]}</h3><p>{item[2]}</p></article>
           ))}
         </div>
