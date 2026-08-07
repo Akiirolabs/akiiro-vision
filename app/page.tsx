@@ -68,6 +68,7 @@ export default function Home() {
           <div className="frame"><img src="/assets/akiiro-icon.png" alt="Animated Akiiro symbol" /></div>
           <div className="orbit orbit-one"><img src="/assets/sea-icon.png" alt="" /></div>
           <div className="orbit orbit-two"><img src="/assets/sea-icon.png" alt="" /></div>
+          <div className="orbit orbit-three"><img src="/assets/disc-icon.png" alt="" /></div>
         </div>
         <div className="hero-index"><span>01</span><span>∞</span></div>
       </section>
@@ -109,8 +110,15 @@ export default function Home() {
         <div className="section-label">03 / The system</div>
         <div className="system-heading"><h2>One space.<br />Every scale.</h2><p>Move from a half-formed thought to a shared world without changing the way you think.</p></div>
         <div className="system-grid">
-          {[['01', 'Capture', 'Collect the spark before it disappears.'], ['02', 'Connect', 'We Build Apps that integrate with each other and other external tools.'], ['03', 'Compose', 'Shape complexity into something clear.'], ['04', 'Release', 'Turn understanding into momentum.']].map((item) => (
-            <article key={item[0]}><small>{item[0]}</small><div className="pulse" /><h3>{item[1]}</h3><p>{item[2]}</p></article>
+          {[
+            { number: '01', title: 'App Store', description: 'Download Akiiro Studio App for Productivity', href: 'https://apps.apple.com/us/app/akiiro/id6746683780', external: true },
+            { number: '02', title: 'Akiiro IO', description: 'Try Akiiro IO Here ', href: 'https://app.akiiro.com', external: true },
+            { number: '03', title: 'Akiiro 3D', description: 'Shape complexity into something clear.', href: 'https://3d.akiiro.com', external: true },
+            { number: '04', title: 'CyberDeck: Studio-A', description: 'Built for Mobility and Efficiency', href: '/cyberdecks', external: false },
+          ].map((item) => (
+            <a className="system-card" href={item.href} key={item.number} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined}>
+              <small>{item.number}</small><div className="pulse" /><h3>{item.title}</h3><p>{item.description}</p>
+            </a>
           ))}
         </div>
       </section>
