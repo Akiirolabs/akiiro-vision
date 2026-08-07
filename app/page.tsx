@@ -81,7 +81,7 @@ export default function Home() {
 
       <section className="objects" id="objects">
         <div className="section-label light">02 / Selected objects</div>
-        <div className="gallery-stage">
+        <div className={`gallery-stage object-${active + 1}`}>
           <div className="gallery-copy">
             <div className="gallery-number">0{active + 1}<sup>/06</sup></div>l
             <p>{selected.tag}</p>
@@ -91,7 +91,7 @@ export default function Home() {
               <button onClick={() => setActive((active + 1) % works.length)} aria-label="Next work">→</button>
             </div>
           </div>
-          <div className="gallery-image" key={selected.src}>
+          <div className={`gallery-image object-${active + 1}`} key={selected.src}>
             <img src={selected.src} alt={selected.title} />
             <span>A K I I R O </span>
           </div>
