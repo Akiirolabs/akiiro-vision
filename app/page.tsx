@@ -52,7 +52,11 @@ export default function Home() {
         ))}
       </aside>
 
-      <section className="hero" id="top">
+      <section className="header-visual" id="top" aria-label="Akiiro software without limits">
+        <img src="/og-software.png" alt="Akiiro — Software without limits" />
+      </section>
+
+      <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>
         <div className="hero-copy">
           <p className="eyebrow">A spatial interface for human imagination</p>
@@ -73,9 +77,6 @@ export default function Home() {
         <p>Designed for the creative.</p>
         <h2>Built for the way your mind <span>actually moves.</span></h2>
         <div className="manifesto-note">A living field where ideas recognize each other.</div>
-        <figure className="manifesto-visual">
-          <img src="/og-software.png" alt="Akiiro — Software without limits" />
-        </figure>
       </section>
 
       <section className="objects" id="objects">
