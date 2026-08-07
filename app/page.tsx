@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 const works = [
-  { src: "/assets/atlas-car.gif", title: "Thought in Motion", tag: "Agent" },
+  { src: "/assets/io-icon.webp", title: "Thought in Motion", tag: "Agent" },
   { src: "/assets/mind-map.png", title: "Akiiro Map App", tag: "Mind map" },
   { src: "/assets/studio-camera.gif", title: "CyberDecks", tag: "Studio" },
   { src: "/assets/atlas-one.jpg", title: "A new colleague", tag: "Atlas" },
@@ -66,8 +66,8 @@ export default function Home() {
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
           <div className="frame"><img src="/assets/akiiro-icon.png" alt="Animated Akiiro symbol" /></div>
-          <div className="orbit orbit-one"><span>THINK</span></div>
-          <div className="orbit orbit-two"><span>MAKE</span></div>
+          <div className="orbit orbit-one"><img src="/assets/sea-icon.png" alt="" /></div>
+          <div className="orbit orbit-two"><img src="/assets/sea-icon.png" alt="" /></div>
         </div>
         <div className="hero-index"><span>01</span><span>∞</span></div>
       </section>
