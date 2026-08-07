@@ -61,7 +61,7 @@ export default function Home() {
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
-          <div className="frame"><img src="/assets/hero-mark.gif" alt="Animated Akiiro symbol" /></div>
+          <div className="frame"><img src="/assets/akiiro-icon.png" alt="Animated Akiiro symbol" /></div>
           <div className="orbit orbit-one"><span>THINK</span></div>
           <div className="orbit orbit-two"><span>MAKE</span></div>
         </div>
@@ -73,6 +73,9 @@ export default function Home() {
         <p>Designed for the creative.</p>
         <h2>Built for the way your mind <span>actually moves.</span></h2>
         <div className="manifesto-note">A living field where ideas recognize each other.</div>
+        <figure className="manifesto-visual">
+          <img src="/og-software.png" alt="Akiiro — Software without limits" />
+        </figure>
       </section>
 
       <section className="objects" id="objects">
