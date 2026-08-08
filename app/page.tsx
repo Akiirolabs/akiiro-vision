@@ -3,12 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 
 const works = [
-  { src: "/assets/iphone-img.png", title: "Mind Map App on IOS", tag: "IOS" },
+  { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS" },
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates" },
   { src: "/assets/product-shot.png", title: "CyberDeck Studio-A", tag: "Product" },
-  { src: "/assets/water.gif", title: "Try the Beta Version below", tag: "Akiiro 3D" },
+  { src: "/assets/water-nologo.gif", title: "Try the Beta Version below", tag: "Akiiro 3D" },
 ];
 
 export default function Home() {
