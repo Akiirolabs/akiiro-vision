@@ -8,7 +8,7 @@ const works = [
   { src: "/assets/studio-camera.gif", title: "CyberDecks", tag: "Studio" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates" },
   { src: "/assets/product-shot.png", title: "CyberDeck Studio-A", tag: "Product" },
-  { src: "/assets/labs-cycle.gif", title: "Endless iteration", tag: "Labs" },
+  { src: "/assets/disc1.gif", title: "Design your ideas with clarity", tag: "Akiiro 3D" },
 ];
 
 export default function Home() {
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
-          <div className="frame"><img src="/assets/akiiro-icon.png" alt="Animated Akiiro symbol" /></div>
+          <div className="frame"><img src="/assets/disc.gif" alt="Animated Akiiro symbol" /></div>
           <div className="orbit orbit-one"><img src="/assets/sun.webp" alt="" /></div>
           <div className="orbit orbit-two"><img src="/assets/moon.png" alt="" /></div>
           <div className="orbit orbit-three"><img src="/assets/disc-icon.png" alt="" /></div>
@@ -113,7 +113,7 @@ export default function Home() {
           {[
             { number: '01', title: 'App Store', description: 'Download Akiiro Studio App for Productivity', href: 'https://apps.apple.com/us/app/akiiro/id6746683780', external: true },
             { number: '02', title: 'Akiiro IO', description: 'Try Akiiro IO Here ', href: 'https://app.akiiro.com', external: true },
-            { number: '03', title: 'Akiiro 3D', description: 'Shape complexity into something clear.', href: 'https://3d.akiiro.com', external: true },
+            { number: '03', title: 'Akiiro 3D [Beta]', description: 'Shape complexity into something clear.', href: 'https://3d.akiiro.com', external: true },
             { number: '04', title: 'CyberDeck: Studio-A', description: 'Built for Mobility and Efficiency', href: '/cyberdecks', external: false },
           ].map((item) => (
             <a className="system-card" href={item.href} key={item.number} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined}>
