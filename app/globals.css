@@ -26,7 +26,7 @@ main { overflow:hidden; }
 }
 
 .orbit-one img {
-  opacity: 1;
+  opacity: .9;
   z-index: 2;
   position: absolute;
   background: #f1f0ea;
