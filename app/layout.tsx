@@ -13,9 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const origin = `${protocol}://${host}`;
   return {
     metadataBase: new URL(origin),
-    title: "Akiiro Vision — Ideas Deserve Dimension",
+    title: "A K I I R O",
     description: "A spatial interface for human imagination. Think, connect, and create with Akiiro.",
-    icons: { icon: "/favicon.svg" },
+    icons: { icon: "/assets/disc-icon.png" },
     openGraph: { title: "Akiiro Vision", description: "Ideas deserve dimension.", images: [{ url: "/og.png", width: 1200, height: 630 }] },
     twitter: { card: "summary_large_image", title: "Akiiro Vision", description: "Ideas deserve dimension.", images: ["/og.png"] },
   };
