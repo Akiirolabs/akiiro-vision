@@ -66,8 +66,8 @@ export default function Home() {
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
           <div className="frame"><img src="/assets/akiiro-icon.png" alt="Animated Akiiro symbol" /></div>
-          <div className="orbit orbit-one"><img src="/assets/sea-icon.png" alt="" /></div>
-          <div className="orbit orbit-two"><img src="/assets/sea-icon.png" alt="" /></div>
+          <div className="orbit orbit-one"><img src="/assets/sun.webp" alt="" /></div>
+          <div className="orbit orbit-two"><img src="/assets/moon.png" alt="" /></div>
           <div className="orbit orbit-three"><img src="/assets/disc-icon.png" alt="" /></div>
         </div>
         <div className="hero-index"><span>01</span><span>∞</span></div>
@@ -84,7 +84,7 @@ export default function Home() {
         <div className="section-label light">02 / Selected objects</div>
         <div className={`gallery-stage object-${active + 1}`}>
           <div className="gallery-copy">
-            <div className="gallery-number">0{active + 1}<sup>/06</sup></div>l
+            <div className="gallery-number">0{active + 1}<sup>/06</sup></div>
             <p>{selected.tag}</p>
             <h2>{selected.title}</h2>
             <div className="gallery-controls">
