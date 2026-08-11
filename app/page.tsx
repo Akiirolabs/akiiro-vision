@@ -92,7 +92,7 @@ export default function Home() {
               <button onClick={() => setActive((active + 1) % works.length)} aria-label="Next work">→</button>
             </div>
           </div>
-          <div className={`gallery-image object-${active + 1}`} key={selected.src}>
+          < div className={`gallery-image object-${active + 1}`} key={selected.src}>
             <img src={selected.src} alt={selected.title} />
             <span>A K I I R O </span>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
 
       <section className="system" id="system">
         <div className="section-label">03 / The system</div>
-        <div className="system-heading"><h2>One space.<br />Every scale.</h2><p>Move from a half-formed thought to a shared world without changing the way you think.</p></div>
+        <div className="system-heading"><h2>One space.<br />Every scale.</h2><p>Move from a thought to a shared world without changing the way you think.</p></div>
         <div className="system-grid">
           {[
             { number: '01', title: 'App Store', description: 'Download Akiiro Studio App for Productivity', href: 'https://apps.apple.com/us/app/akiiro/id6746683780', external: true },
@@ -131,3 +131,4 @@ export default function Home() {
     </main>
   );
 }
+55
