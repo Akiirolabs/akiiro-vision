@@ -70,6 +70,18 @@ export default function Home() {
         <img src="/og-software.png" alt="Akiiro — Software without limits" />
       </section>
 
+      <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
+        <div className="deck-teaser-copy">
+          <span>AKIIRO HARDWARE / 001</span>
+          <h2>Studio‑A</h2>
+          <p>A studio that moves with the idea.</p>
+          <strong>Discover the cyberdeck ↗</strong>
+        </div>
+        <div className="deck-teaser-image">
+          <img className="deck-teaser-photo" src="/assets/studio-a/front-black-slim.png" alt="Black Studio-A cyberdeck viewed straight from the front" />
+        </div>
+      </a>
+
       <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>
         <div className="hero-copy">
