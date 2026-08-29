@@ -29,7 +29,6 @@ export default function CyberdecksPage() {
           <a href="/">Home</a>
           <a href="/#objects">Products</a>
           <a href="/cyberdecks" aria-current="page">Cyberdecks</a>
-          <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">Shop ↗</a>
         </div>
       </nav>
 
