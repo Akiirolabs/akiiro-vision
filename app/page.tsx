@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
+
 const works = [
   { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS" },
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map" },
@@ -27,6 +29,12 @@ export default function Home() {
   }, []);
 
   const selected = useMemo(() => works[active], [active]);
+  const menuItems = [
+    { label: "Home", href: "#top" },
+    { label: "Products", href: "#objects" },
+    { label: "Cyberdecks", href: "/cyberdecks" },
+    { label: "Shop", href: checkoutUrl, external: true },
+  ];
 
   return (
     <main onPointerMove={(event) => setCursor({
@@ -44,10 +52,16 @@ export default function Home() {
       </nav>
 
       <aside className={`menu ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
-        <div className="menu-count">00—04</div>
-        {['Manifesto', 'Objects', 'System', 'Contact'].map((item, index) => (
-          <a href={`#${item.toLowerCase()}`} key={item} onClick={() => setMenuOpen(false)}>
-            <small>0{index + 1}</small>{item}
+        <div className="menu-count">01—04 / Index</div>
+        {menuItems.map((item, index) => (
+          <a
+            href={item.href}
+            key={item.label}
+            onClick={() => setMenuOpen(false)}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener noreferrer" : undefined}
+          >
+            <small>0{index + 1}</small>{item.label}
           </a>
         ))}
       </aside>
@@ -92,7 +106,7 @@ export default function Home() {
               <button onClick={() => setActive((active + 1) % works.length)} aria-label="Next work">→</button>
             </div>
           </div>
-          < div className={`gallery-image object-${active + 1}`} key={selected.src}>
+          <div className={`gallery-image object-${active + 1}`} key={selected.src}>
             <img src={selected.src} alt={selected.title} />
             <span>A K I I R O </span>
           </div>
@@ -123,6 +137,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-deck" id="cyberdecks">
+        <div className="home-deck-head">
+          <span>04 / Akiiro Hardware</span>
+          <a href="/cyberdecks">View Studio‑A <span>↗</span></a>
+        </div>
+
+        <div className="home-deck-intro">
+          <p>CYBERDECK / STUDIO‑A</p>
+          <h2>Your studio.<br /><em>Unbound.</em></h2>
+          <p className="home-deck-lede">A compact creative system shaped around mobility, focus, and the freedom to work beyond a fixed desk.</p>
+        </div>
+
+        <a className="home-deck-hero" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
+          <img src="/assets/studio-a/hero-black.png" alt="Black Studio-A cyberdeck shown in profile" />
+          <div className="home-deck-caption"><span>STUDIO‑A / BLACK</span><span>EXPLORE THE OBJECT ↗</span></div>
+        </a>
+
+        <div className="home-deck-grid">
+          <figure>
+            <img src="/assets/studio-a/white-front.jpg" alt="White Studio-A cyberdeck front view" />
+            <figcaption>LIGHT / FRONT</figcaption>
+          </figure>
+          <div className="home-deck-principle">
+            <span>01</span>
+            <p>Less equipment.<br />More room to think.</p>
+            <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">Shop Studio‑A ↗</a>
+          </div>
+          <figure>
+            <img src="/assets/studio-a/black-white-pair.jpg" alt="Black and white Studio-A cyberdecks" />
+            <figcaption>DARK + LIGHT / TWO FINISHES</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="contact" id="contact">
         <div className="contact-image"><img src="/assets/atlas-agent.gif" alt="Atlas digital agent in motion" /></div>
         <div className="contact-copy"><p>Intelligence should feel less artificial.</p><h2>Enter the<br /><em>thinking space.</em></h2><a href="mailto:hello@akiiro.co">Request access <span>↗</span></a></div>
@@ -131,4 +179,3 @@ export default function Home() {
     </main>
   );
 }
-55
