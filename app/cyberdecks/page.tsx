@@ -56,7 +56,7 @@ export default function CyberdecksPage() {
 
       <section className="deck-object-grid" aria-label="Studio-A product views">
         <figure className="deck-object-large">
-          <img src="/assets/studio-a/white-front.jpg" alt="White Studio-A cyberdeck viewed from the front" />
+          <img src="/assets/studio-a/white-front-flat.png" alt="White Studio-A cyberdeck viewed from the front with a smooth top edge" />
           <figcaption><span>LIGHT / FRONT</span><span>01</span></figcaption>
         </figure>
         <figure>
@@ -91,11 +91,11 @@ export default function CyberdecksPage() {
           <p>Two finishes. The same deliberate object.</p>
         </div>
         <figure>
-          <img src="/assets/studio-a/white-views.png" alt="Four views of the white Studio-A cyberdeck" />
+          <img src="/assets/studio-a/white-views-flat.png" alt="Four views of the white Studio-A cyberdeck with a smooth top edge" />
           <figcaption>STUDIO‑A / LIGHT</figcaption>
         </figure>
         <figure>
-          <img src="/assets/studio-a/black-views.png" alt="Four views of the black Studio-A cyberdeck" />
+          <img src="/assets/studio-a/black-views-flat.png" alt="Four views of the black Studio-A cyberdeck with a smooth top edge" />
           <figcaption>STUDIO‑A / DARK</figcaption>
         </figure>
       </section>

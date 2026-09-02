@@ -10,7 +10,6 @@ const works = [
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
   { src: "/assets/studio-a/object-05-connectivity.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
-  { src: "/assets/water-nologo.gif", title: "Try the Beta Version below", tag: "Akiiro 3D", subtitle: "" },
   { src: "/assets/studio-a/object-07-studio-am.jpeg", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
 ];
@@ -112,7 +111,7 @@ export default function Home() {
         <div className="section-label light">02 / Selected objects</div>
         <div className={`gallery-stage object-${active + 1}`}>
           <div className="gallery-copy">
-            <div className="gallery-number">0{active + 1}<sup>/08</sup></div>
+            <div className="gallery-number">0{active + 1}<sup>/07</sup></div>
             <p>{selected.tag}</p>
             <h2>{selected.title}</h2>
             {selected.subtitle && <div className="gallery-subtitle">{selected.subtitle}</div>}
@@ -172,7 +171,7 @@ export default function Home() {
 
         <div className="home-deck-grid">
           <figure>
-            <img src="/assets/studio-a/white-front.jpg" alt="White Studio-A cyberdeck front view" />
+            <img src="/assets/studio-a/white-front-flat.png" alt="White Studio-A cyberdeck front view with a smooth top edge" />
             <figcaption>LIGHT / FRONT</figcaption>
           </figure>
           <div className="home-deck-principle">

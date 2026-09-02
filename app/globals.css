@@ -539,7 +539,7 @@ main {
 
 .gallery-strip {
   display: grid;
-  grid-template-columns: repeat(8,1fr);
+  grid-template-columns: repeat(7,1fr);
   gap: 8px;
 }
 
@@ -955,7 +955,7 @@ main {
   }
   .gallery-strip {
     overflow-x: auto;
-    grid-template-columns: repeat(8,110px);
+    grid-template-columns: repeat(7,110px);
     padding: 5px;
   }
   .system-heading {
