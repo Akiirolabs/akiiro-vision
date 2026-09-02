@@ -5,12 +5,14 @@ import { useEffect, useMemo, useState } from "react";
 const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 
 const works = [
-  { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS" },
-  { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map" },
-  { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d" },
-  { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates" },
-  { src: "/assets/product-shot.png", title: "CyberDeck Studio-A", tag: "Product" },
-  { src: "/assets/water-nologo.gif", title: "Try the Beta Version below", tag: "Akiiro 3D" },
+  { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS", subtitle: "" },
+  { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
+  { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
+  { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
+  { src: "/assets/studio-a/object-05-connectivity.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
+  { src: "/assets/water-nologo.gif", title: "Try the Beta Version below", tag: "Akiiro 3D", subtitle: "" },
+  { src: "/assets/studio-a/object-07-studio-am.jpeg", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
+  { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
 ];
 
 export default function Home() {
@@ -110,9 +112,10 @@ export default function Home() {
         <div className="section-label light">02 / Selected objects</div>
         <div className={`gallery-stage object-${active + 1}`}>
           <div className="gallery-copy">
-            <div className="gallery-number">0{active + 1}<sup>/06</sup></div>
+            <div className="gallery-number">0{active + 1}<sup>/08</sup></div>
             <p>{selected.tag}</p>
             <h2>{selected.title}</h2>
+            {selected.subtitle && <div className="gallery-subtitle">{selected.subtitle}</div>}
             <div className="gallery-controls">
               <button onClick={() => setActive((active + works.length - 1) % works.length)} aria-label="Previous work">←</button>
               <button onClick={() => setActive((active + 1) % works.length)} aria-label="Next work">→</button>

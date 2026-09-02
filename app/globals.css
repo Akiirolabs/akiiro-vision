@@ -469,8 +469,16 @@ main {
   font-size: clamp(2.8rem,5vw,5.5rem);
   letter-spacing: -.065em;
   line-height: .9;
-  margin: 10px 0 30px;
+  margin: 10px 0 16px;
   max-width: 420px;
+}
+
+.gallery-subtitle {
+  max-width: 320px;
+  margin: 0 0 30px;
+  color: #a4a4a0;
+  font: 11px/1.5 var(--font-mono);
+  letter-spacing: .04em;
 }
 
 .gallery-controls {
@@ -531,7 +539,7 @@ main {
 
 .gallery-strip {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(8,1fr);
   gap: 8px;
 }
 
@@ -947,7 +955,7 @@ main {
   }
   .gallery-strip {
     overflow-x: auto;
-    grid-template-columns: repeat(6,110px);
+    grid-template-columns: repeat(8,110px);
     padding: 5px;
   }
   .system-heading {
