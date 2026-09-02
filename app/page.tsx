@@ -9,7 +9,7 @@ const works = [
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
-  { src: "/assets/studio-a/object-05-connectivity.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
+  { src: "/assets/studio-a/object-05-front.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
   { src: "/assets/studio-a/object-07-studio-am.jpeg", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
 ];
@@ -105,6 +105,11 @@ export default function Home() {
         <p>Designed for the creative.</p>
         <h2>Built for the way your mind <span>actually moves.</span></h2>
         <div className="manifesto-note">A living field where ideas recognize each other.</div>
+      </section>
+
+      <section className="connectivity-feature" aria-label="Studio-A connectivity">
+        <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
+        <p>Built to connect. Designed to arrive.</p>
       </section>
 
       <section className="objects" id="objects">
