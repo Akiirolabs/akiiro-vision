@@ -78,7 +78,7 @@ export default function Home() {
           <strong>Discover the cyberdeck ↗</strong>
         </div>
         <div className="deck-teaser-image">
-          <img className="deck-teaser-photo" src="/assets/studio-a/front-black-slim.png" alt="Black Studio-A cyberdeck viewed straight from the front" />
+          <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
 
