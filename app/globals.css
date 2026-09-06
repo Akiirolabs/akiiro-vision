@@ -470,15 +470,22 @@ main {
 }
 
 .gallery-number {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(12px,1vw,20px);
   font: clamp(3rem,7vw,7rem) var(--font-mono);
   letter-spacing: -.08em;
   color: var(--acid);
 }
 
 .gallery-number sup {
+  display: block;
+  padding-top: .65em;
   font-size: 11px;
+  line-height: 1;
+  letter-spacing: .08em;
   color: #777;
-  margin-left: 8px;
+  margin: 0;
 }
 
 .gallery-copy>p {

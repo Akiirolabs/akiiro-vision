@@ -10,7 +10,7 @@ const works = [
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
   { src: "/assets/studio-a/object-05-front.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
-  { src: "/assets/studio-a/object-07-studio-am.jpeg", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
+  { src: "/assets/studio-am/object-06-approved-baseline.png", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
 ];
 
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">A spatial interface for human imagination</p>
           <h1>Ideas deserve<br /><em>dimension.</em></h1>
-          <p className="intro">Software for the Creative.</p>
+          <p className="intro">AO Agent. Capture Inteligence.</p>
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
