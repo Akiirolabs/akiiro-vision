@@ -308,6 +308,16 @@ main {
   line-height: 1.55;
 }
 
+.hero-launch {
+  display: inline-block;
+  margin: 10px 0 0 31%;
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
+  font: 10px var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 .hero-object {
   position: absolute;
   z-index: 2;
@@ -961,6 +971,9 @@ main {
     margin: 38vh 0 0;
     width: 90%;
     max-width: none;
+  }
+  .hero-launch {
+    margin-left: 0;
   }
   .hero-object {
     top: 41vh;

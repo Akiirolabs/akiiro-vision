@@ -89,6 +89,7 @@ export default function Home() {
           <p className="eyebrow">A spatial interface for human imagination</p>
           <h1>Ideas deserve<br /><em>dimension.</em></h1>
           <p className="intro">AO Agent. Capture Intelligence.</p>
+          <a className="hero-launch" href="https://work.akiiro.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
