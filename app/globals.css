@@ -160,6 +160,7 @@ main {
 }
 
 .header-visual {
+  position: relative;
   width: 100%;
   overflow: hidden;
   background: #ece7dc;
@@ -169,6 +170,20 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.header-studio {
+  position: absolute;
+  top: 36.2%;
+  left: 26.7%;
+  color: #080808;
+  font-size: clamp(7px,1vw,17px);
+  font-weight: 300;
+  letter-spacing: .12em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .deck-teaser {
@@ -314,6 +329,13 @@ main {
   font: 10px var(--font-mono);
   letter-spacing: .12em;
   text-transform: uppercase;
+  transition: color .2s ease,text-shadow .2s ease;
+}
+
+.hero-launch:hover,
+.hero-launch:focus-visible {
+  color: #72cfff;
+  text-shadow: 0 0 7px rgba(64,181,255,.95),0 0 18px rgba(64,181,255,.72);
 }
 
 .hero-object {

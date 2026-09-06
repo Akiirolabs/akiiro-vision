@@ -69,6 +69,7 @@ export default function Home() {
 
       <section className="header-visual" id="top" aria-label="Akiiro software without limits">
         <img src="/og-software.png" alt="Akiiro — Software without limits" />
+        <span className="header-studio">Studio</span>
       </section>
 
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
