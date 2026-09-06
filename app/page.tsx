@@ -93,7 +93,7 @@ export default function Home() {
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
           <div className="frame"><img src="/assets/disc.gif" alt="Animated Akiiro symbol" /></div>
-          <div className="orbit orbit-one"><img src="/assets/sun-orange.webp" alt="" /></div>
+          <div className="orbit orbit-one"><img src="/assets/sun.webp" alt="" /></div>
           <div className="orbit orbit-two"><img src="/assets/moon.png" alt="" /></div>
           <div className="orbit orbit-three"><img src="/assets/disc-icon.png" alt="" /></div>
         </div>
