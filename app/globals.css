@@ -311,8 +311,6 @@ main {
 .hero-launch {
   display: inline-block;
   margin: 10px 0 0 31%;
-  padding-bottom: 3px;
-  border-bottom: 1px solid currentColor;
   font: 10px var(--font-mono);
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -958,6 +956,7 @@ main {
   }
   .hero-copy {
     width: 100%;
+    padding-bottom: 70px;
   }
   .eyebrow {
     margin-bottom: 4vh;
