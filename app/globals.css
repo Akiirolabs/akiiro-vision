@@ -338,6 +338,31 @@ main {
   text-shadow: 0 0 7px rgba(64,181,255,.95),0 0 18px rgba(64,181,255,.72);
 }
 
+.macro-panel-button {
+  display: block;
+  width: clamp(78px,7vw,108px);
+  margin: 14px 0 0 31%;
+  border-radius: 50%;
+  transition: filter .2s ease,transform .2s ease;
+}
+
+.macro-panel-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.macro-panel-button:hover,
+.macro-panel-button:focus-visible {
+  filter: drop-shadow(0 0 5px rgba(255,255,255,.95)) drop-shadow(0 0 14px rgba(255,255,255,.68));
+  transform: scale(1.025);
+}
+
+.macro-panel-button:focus-visible {
+  outline: 1px solid rgba(255,255,255,.9);
+  outline-offset: 4px;
+}
+
 .hero-object {
   position: absolute;
   z-index: 2;
@@ -978,7 +1003,7 @@ main {
   }
   .hero-copy {
     width: 100%;
-    padding-bottom: 70px;
+    padding-bottom: 145px;
   }
   .eyebrow {
     margin-bottom: 4vh;
@@ -995,6 +1020,10 @@ main {
   }
   .hero-launch {
     margin-left: 0;
+  }
+  .macro-panel-button {
+    width: 68px;
+    margin: 10px 0 0;
   }
   .hero-object {
     top: 41vh;
