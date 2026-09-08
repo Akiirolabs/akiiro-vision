@@ -174,8 +174,8 @@ main {
 
 .header-studio {
   position: absolute;
-  top: 36.2%;
-  left: 26.7%;
+  top: 37%;
+  left: 27.4%;
   color: #080808;
   font-size: clamp(7px,1vw,17px);
   font-weight: 300;
