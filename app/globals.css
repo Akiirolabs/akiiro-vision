@@ -343,6 +343,7 @@ main {
   width: clamp(78px,7vw,108px);
   margin: 14px 0 0 calc(31% - 8px);
   border-radius: 50%;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,.95)) drop-shadow(0 0 14px rgba(255,255,255,.68));
   transition: filter .2s ease,transform .2s ease;
 }
 
@@ -353,8 +354,9 @@ main {
 }
 
 .macro-panel-button:hover,
-.macro-panel-button:focus-visible {
-  filter: drop-shadow(0 0 5px rgba(255,255,255,.95)) drop-shadow(0 0 14px rgba(255,255,255,.68));
+.macro-panel-button:focus-visible,
+.macro-panel-button:active {
+  filter: drop-shadow(0 0 5px rgba(64,181,255,.98)) drop-shadow(0 0 16px rgba(64,181,255,.82));
   transform: scale(1.025);
 }
 
