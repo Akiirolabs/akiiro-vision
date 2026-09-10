@@ -153,7 +153,7 @@ export default function Home() {
             { number: '02', title: 'Akiiro IO', description: 'Try Akiiro IO Here ', href: 'https://app.akiiro.com', external: true },
             { number: '03', title: 'Akiiro 3D [Beta]', description: 'Shape complexity into something clear.', href: 'https://3d.akiiro.com', external: true },
             { number: '04', title: 'CyberDeck: Studio-A', description: 'Built for Mobility and Efficiency', href: '/cyberdecks', external: false },
-            { number: '05', title: 'Work Sync', description: 'A macro app that streamlines every workflow. Type less and do more. Powered by AO using MKM frameworks.', href: 'https://work.akiiro.com', external: true },
+            { number: '05', title: 'Macro Kii', description: 'A macro app that streamlines every workflow. Type less and do more. Powered by AO using MKM frameworks.', href: 'https://work.akiiro.com', external: true },
           ].map((item) => (
             <a className="system-card" href={item.href} key={item.number} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined}>
               <small>{item.number}</small><div className="pulse" /><h3>{item.title}</h3><p>{item.description}</p>
