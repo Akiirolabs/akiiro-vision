@@ -90,8 +90,8 @@ export default function Home() {
           <p className="eyebrow">A spatial interface for human imagination</p>
           <h1>Ideas deserve<br /><em>dimension.</em></h1>
           <p className="intro">AO Agent. Capture Intelligence.</p>
-          <a className="hero-launch" href="https://work.akiiro.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
-          <a className="macro-panel-button" href="https://work.akiiro.com" target="_blank" rel="noopener noreferrer" aria-label="Launch Macro">
+          <a className="hero-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
+          <a className="macro-panel-button" href="https://macrokii.com" target="_blank" rel="noopener noreferrer" aria-label="Launch Macro">
             <img src="/assets/macro-panel-button.png" alt="" />
           </a>
         </div>
@@ -153,7 +153,7 @@ export default function Home() {
             { number: '02', title: 'Akiiro IO', description: 'Try Akiiro IO Here ', href: 'https://app.akiiro.com', external: true },
             { number: '03', title: 'Akiiro 3D [Beta]', description: 'Shape complexity into something clear.', href: 'https://3d.akiiro.com', external: true },
             { number: '04', title: 'CyberDeck: Studio-A', description: 'Built for Mobility and Efficiency', href: '/cyberdecks', external: false },
-            { number: '05', title: 'Macro Kii', description: 'A macro app that streamlines every workflow. Type less and do more. Powered by AO using MKM frameworks.', href: 'https://work.akiiro.com', external: true },
+            { number: '05', title: 'Macro Kii', description: 'A macro app that streamlines every workflow. Type less and do more. Powered by AO using MKM frameworks.', href: 'https://macrokii.com', external: true },
           ].map((item) => (
             <a className="system-card" href={item.href} key={item.number} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined}>
               <small>{item.number}</small><div className="pulse" /><h3>{item.title}</h3><p>{item.description}</p>
