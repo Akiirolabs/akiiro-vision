@@ -4,7 +4,7 @@ import MacroInterface from "./MacroInterface";
 
 export const metadata: Metadata = {
   title: "Macro Kii — A Macro-Powered Workspace | Akiiro",
-  description: "Meet Macro Kii, a connected productivity workspace built around the Macro Panel, Macro Key Menu, reusable workflows, routing, saved text, tasks, tables, calendars, and AO assistance.",
+  description: "Meet Macro Kii, a connected macro workspace for reusable workflows, tasks, tables, calendars, AO assistance, evidence verification, and transparent trust scoring.",
   alternates: { canonical: "https://akiiro.com/macrokii" },
   openGraph: {
     title: "Macro Kii — Your entire workspace, connected through macros",
@@ -68,6 +68,7 @@ const schema = {
     "Saved text vault",
     "Tasks, notes, tables, and calendar",
     "Evidence-based verification workspace",
+    "Evidence trust scoring with source context",
     "AO Agent output handoffs",
   ],
   screenshot: "https://akiiro.com/assets/macrokii/tables.png",
@@ -167,11 +168,17 @@ export default function MacroKiiPage() {
         <div className="mk-section-label">04 / ASSISTANCE IN CONTEXT</div>
         <div className="mk-agent-copy">
           <h2>AI supports the workflow.<br /><em>It does not define it.</em></h2>
-          <p>AO Agent sits beside the workspace. The demonstrated interface shows agent history, research-oriented Verify views, and output handoffs to To Do, Tables, Page, Verify, Calendar, and Workspace Note.</p>
+          <div>
+            <p>A quick answer can sound certain and still leave out what matters. Macro Kii’s Verify workspace uses a specialized verification model to examine claims against multiple sources, expose uncertainty, and return an evidence trust score with the reasoning kept in view.</p>
+            <p>It is built for consultants, researchers, analysts, and demanding study—work where “probably right” is not enough. The score is not a promise of infallibility. It is a clear signal of how well the available evidence supports a finding, so professionals can review the basis, recognize the limits, and move forward with greater confidence.</p>
+          </div>
         </div>
         <div className="mk-agent-media">
           <figure><img src="/assets/macrokii/verify-score-new.png" width="802" height="759" loading="lazy" alt="Macro Kii verification findings with a 90 out of 100 evidence trust score" /><figcaption>Verify / findings with evidence context</figcaption></figure>
-          <figure><img src="/assets/macrokii/ao-destinations-new.png" width="252" height="151" loading="lazy" alt="Macro Kii main macros for sending work to connected destinations" /><figcaption>AO output / choose a connected macro destination</figcaption></figure>
+          <div className="mk-agent-side">
+            <figure><img src="/assets/macrokii/ao-agent-control.png" width="248" height="215" loading="lazy" alt="AO Agent control for opening the side chat or hiding the agent" /><figcaption>AO Agent / present when needed, quiet when not</figcaption></figure>
+            <figure><img src="/assets/macrokii/ao-destinations-new.png" width="252" height="151" loading="lazy" alt="Macro Kii main macros for sending work to connected destinations" /><figcaption>AO output / choose a connected macro destination</figcaption></figure>
+          </div>
         </div>
       </section>
 
@@ -215,6 +222,7 @@ export default function MacroKiiPage() {
           <details><summary>Is Macro Kii a keyboard macro or hardware macro-pad app?</summary><p>No. The product shown here focuses on macros and content movement within its own connected workspace, not keyboard remapping, gaming macros, or programmable hardware keys.</p></details>
           <details><summary>Where can Macro Kii send content?</summary><p>The screenshots show specific destinations such as Workspace, Pages, Day Documents, To Do, Tables, Verify, Calendar, and Workspace Note. Availability depends on the workflow being used.</p></details>
           <details><summary>What role does AO Agent play?</summary><p>AO Agent is supporting functionality. It can assist beside the work and hand outputs to destinations shown in the interface; the macro framework remains the product’s center.</p></details>
+          <details><summary>What does the evidence trust score mean?</summary><p>The evidence trust score indicates how strongly the sources examined by Verify support a finding. Macro Kii keeps supporting context and uncertainty visible so the score can guide professional judgment rather than replace it.</p></details>
         </div>
       </section>
 

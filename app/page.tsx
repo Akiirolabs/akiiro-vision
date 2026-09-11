@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 
@@ -8,14 +8,14 @@ type Work = { src: string; title: string; tag: string; subtitle: string; href?: 
 
 const works: Work[] = [
   { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS", subtitle: "" },
-  { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
-  { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
-  { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
   { src: "/assets/studio-a/object-05-front.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
   { src: "/assets/studio-am/object-06-approved-baseline.png", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
   { src: "/assets/macrokii/interface-dark-workspace.png", title: "Macro Kii", tag: "Macro app", subtitle: "A macro app that connects notes, tasks, tables, calendars, research, and reusable workflows inside one continuous workspace.", href: "/macrokii" },
   { src: "/assets/macrokii/macro-panel-filled.png", title: "Macro Panel", tag: "Macro Kii", subtitle: "One quiet control point for the actions that keep work moving.", href: "/macrokii#interface" },
+  { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
+  { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
+  { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
 ];
 
 export default function Home() {
@@ -23,6 +23,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cursor, setCursor] = useState({ x: 50, y: 42 });
   const [clock, setClock] = useState("");
+  const galleryScrollY = useRef<number | null>(null);
 
   useEffect(() => {
     const tick = () => setClock(new Intl.DateTimeFormat("en-US", {
@@ -34,12 +35,22 @@ export default function Home() {
   }, []);
 
   const selected = useMemo(() => works[active], [active]);
+  const selectWork = (index: number) => {
+    galleryScrollY.current = window.scrollY;
+    setActive(index);
+  };
+
+  useLayoutEffect(() => {
+    if (galleryScrollY.current === null) return;
+    window.scrollTo(0, galleryScrollY.current);
+    galleryScrollY.current = null;
+  }, [active]);
+
   const menuItems = [
     { label: "Home", href: "#top" },
     { label: "Products", href: "#objects" },
     { label: "Macro Kii", href: "/macrokii" },
     { label: "Cyberdecks", href: "/cyberdecks" },
-    { label: "Shop", href: checkoutUrl, external: true },
   ];
 
   return (
@@ -58,7 +69,7 @@ export default function Home() {
       </nav>
 
       <aside className={`menu ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
-        <div className="menu-count">01—05 / Index</div>
+        <div className="menu-count">01—04 / Index</div>
         {menuItems.map((item, index) => (
           <a
             href={item.href}
@@ -115,7 +126,7 @@ export default function Home() {
 
       <section className="manifesto" id="manifesto">
         <div className="section-label">01 / Manifesto</div>
-        <p>Designed for the creative.</p>
+        <p>Designed for the way you work.</p>
         <h2>Built for the way your mind <span>actually moves.</span></h2>
         <div className="manifesto-note">A living field where ideas recognize each other.</div>
       </section>
@@ -134,18 +145,25 @@ export default function Home() {
             <h2>{selected.title}</h2>
             {selected.subtitle && <div className="gallery-subtitle">{selected.subtitle}</div>}
             <div className="gallery-controls">
-              <button onClick={() => setActive((active + works.length - 1) % works.length)} aria-label="Previous work">←</button>
-              <button onClick={() => setActive((active + 1) % works.length)} aria-label="Next work">→</button>
+              <button type="button" onClick={() => selectWork((active + works.length - 1) % works.length)} aria-label="Previous work">←</button>
+              <button type="button" onClick={() => selectWork((active + 1) % works.length)} aria-label="Next work">→</button>
             </div>
           </div>
-          <a className={`gallery-image object-${active + 1}`} key={selected.src} href={selected.href} aria-label={selected.href ? `Explore ${selected.title}` : undefined}>
-            <img src={selected.src} alt={selected.title} />
-            <span>A K I I R O </span>
-          </a>
+          {selected.href ? (
+            <a className={`gallery-image object-${active + 1}`} key={selected.src} href={selected.href} aria-label={`Explore ${selected.title}`}>
+              <img src={selected.src} alt={selected.title} />
+              <span>A K I I R O </span>
+            </a>
+          ) : (
+            <div className={`gallery-image object-${active + 1}`} key={selected.src}>
+              <img src={selected.src} alt={selected.title} />
+              <span>A K I I R O </span>
+            </div>
+          )}
         </div>
         <div className="gallery-strip">
           {works.map((work, index) => (
-            <button key={work.src} className={index === active ? "active" : ""} onClick={() => setActive(index)} aria-label={`View ${work.title}`}>
+            <button type="button" key={work.src} className={index === active ? "active" : ""} onClick={() => selectWork(index)} aria-label={`View ${work.title}`}>
               <img src={work.src} alt="" /><span>0{index + 1}</span>
             </button>
           ))}
