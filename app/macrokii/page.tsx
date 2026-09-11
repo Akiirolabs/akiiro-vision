@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./macrokii.css";
+import MacroInterface from "./MacroInterface";
 
 export const metadata: Metadata = {
   title: "Macro Kii — A Macro-Powered Workspace | Akiiro",
@@ -18,27 +19,27 @@ const featureCards = [
     number: "01",
     title: "Route",
     body: "Choose a source item and a supported destination, then move work between sections without rebuilding it by hand.",
-    image: "/assets/macrokii/route.png",
-    width: 363,
-    height: 322,
+    image: "/assets/macrokii/route-new.png",
+    width: 346,
+    height: 306,
     alt: "Macro Kii Route panel with source section, source item, and destination section controls",
   },
   {
     number: "02",
     title: "Turbo",
     body: "Write once, choose from the destinations shown in the interface, and add the result to Workspace, Pages, or Day Documents.",
-    image: "/assets/macrokii/turbo.png",
-    width: 365,
-    height: 336,
+    image: "/assets/macrokii/turbo-new.png",
+    width: 349,
+    height: 303,
     alt: "Macro Kii Turbo panel offering Workspace, Pages, and Day Documents as destinations",
   },
   {
     number: "03",
     title: "Vault",
     body: "Keep saved text, presets, and reusable macros ready for the moment a repeated workflow returns.",
-    image: "/assets/macrokii/vault.png",
-    width: 354,
-    height: 620,
+    image: "/assets/macrokii/vault-new.png",
+    width: 334,
+    height: 606,
     alt: "Macro Kii Vault showing saved macros, text presets, and workflow filters",
   },
 ];
@@ -80,7 +81,7 @@ export default function MacroKiiPage() {
       <nav className="mk-nav" aria-label="Macro Kii navigation">
         <a href="/" className="mk-brand">AKIIRO®</a>
         <span>AO / ADVANCED OPERATOR</span>
-        <a href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro Kii ↗</a>
+        <a href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro Kii</a>
       </nav>
 
       <header className="mk-hero">
@@ -89,12 +90,12 @@ export default function MacroKiiPage() {
           <h1>Your entire workspace.<br /><em>Connected through macros.</em></h1>
           <p>Macro Kii brings notes, tasks, tables, calendars, research, saved text, and assisted work into one interface—then connects the supported paths between them through AO, the Macro Panel, and the Macro Key Menu.</p>
           <div className="mk-actions">
-            <a className="mk-primary" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Open Macro Kii ↗</a>
+            <a className="mk-primary" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Open Macro Kii</a>
             <a href="#experience">See the system ↓</a>
           </div>
         </div>
         <figure className="mk-hero-visual">
-          <img src="/assets/macrokii/macro-panel.png" width="218" height="240" alt="Macro Kii circular Macro Panel with six workflow controls" />
+          <img src="/assets/macrokii/macro-panel-filled.png" width="218" height="240" alt="Macro Kii circular Macro Panel with six workflow controls" />
           <figcaption>The Macro Panel / one control point for the workspace</figcaption>
         </figure>
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
@@ -106,7 +107,13 @@ export default function MacroKiiPage() {
           <p className="mk-eyebrow">A built-in macro panel</p>
           <h2>Less switching.<br /><em>More continuity.</em></h2>
         </div>
-        <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard—it is part of the workspace itself.</p>
+        <div className="mk-intro-side">
+          <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard—it is part of the workspace itself.</p>
+          <a className="mk-panel-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="" />
+            <span>Open Macro Kii</span>
+          </a>
+        </div>
       </section>
 
       <section className="mk-proof-panel">
@@ -135,8 +142,10 @@ export default function MacroKiiPage() {
         ))}
       </section>
 
+      <MacroInterface />
+
       <section className="mk-workspace">
-        <div className="mk-section-label">02 / ONE WORKSPACE</div>
+        <div className="mk-section-label">03 / ONE WORKSPACE</div>
         <div className="mk-workspace-head">
           <h2>Every section has a purpose.<br /><em>Macros give them momentum.</em></h2>
           <p>Macro Kii combines familiar work surfaces with explicit paths for reuse and handoff. The supplied product screens demonstrate the following capabilities.</p>
@@ -155,19 +164,19 @@ export default function MacroKiiPage() {
       </section>
 
       <section className="mk-agent">
-        <div className="mk-section-label">03 / ASSISTANCE IN CONTEXT</div>
+        <div className="mk-section-label">04 / ASSISTANCE IN CONTEXT</div>
         <div className="mk-agent-copy">
           <h2>AI supports the workflow.<br /><em>It does not define it.</em></h2>
           <p>AO Agent sits beside the workspace. The demonstrated interface shows agent history, research-oriented Verify views, and output handoffs to To Do, Tables, Page, Verify, Calendar, and Workspace Note.</p>
         </div>
         <div className="mk-agent-media">
-          <figure><img src="/assets/macrokii/verify.png" width="1919" height="955" loading="lazy" alt="Macro Kii Verify workspace with evidence trust score, findings, and supporting context" /><figcaption>Verify / findings with evidence context</figcaption></figure>
-          <figure><img src="/assets/macrokii/output-handoff.png" width="355" height="184" loading="lazy" alt="Macro Kii output handoff menu with six supported destinations" /><figcaption>AO output / choose a supported destination</figcaption></figure>
+          <figure><img src="/assets/macrokii/verify-score-new.png" width="802" height="759" loading="lazy" alt="Macro Kii verification findings with a 90 out of 100 evidence trust score" /><figcaption>Verify / findings with evidence context</figcaption></figure>
+          <figure><img src="/assets/macrokii/ao-destinations-new.png" width="252" height="151" loading="lazy" alt="Macro Kii main macros for sending work to connected destinations" /><figcaption>AO output / choose a connected macro destination</figcaption></figure>
         </div>
       </section>
 
       <section className="mk-difference">
-        <div className="mk-section-label">04 / THE DIFFERENCE</div>
+        <div className="mk-section-label">05 / THE DIFFERENCE</div>
         <div className="mk-difference-grid">
           <h2>Not a hardware macro pad.<br />Not a keyboard remapper.<br /><em>A connected workspace.</em></h2>
           <div>
@@ -178,7 +187,7 @@ export default function MacroKiiPage() {
       </section>
 
       <section className="mk-use-cases">
-        <div className="mk-section-label">05 / PRACTICAL FLOWS</div>
+        <div className="mk-section-label">06 / PRACTICAL FLOWS</div>
         <div className="mk-use-grid">
           <article><span>RESEARCH → WORKSPACE</span><h3>Check the evidence. Keep the useful part.</h3><p>Review a Verify result, then send the finding into a supported workspace destination.</p></article>
           <article><span>SAVED TEXT → DOCUMENT</span><h3>Turn repeated language into a reusable starting point.</h3><p>Keep text presets in the Vault and bring them back when a familiar document or note returns.</p></article>
@@ -187,7 +196,7 @@ export default function MacroKiiPage() {
       </section>
 
       <section className="mk-evidence">
-        <div className="mk-section-label">06 / EVIDENCE MAP</div>
+        <div className="mk-section-label">07 / EVIDENCE MAP</div>
         <h2>What the product screens establish.</h2>
         <div className="mk-evidence-table">
           <div><strong>Visible now</strong><span>Macro Panel, Macro Key Menu, Route, Turbo, Vault, tasks, tables, calendar, Verify, AO output destinations, dark and light themes, compact panel layout.</span></div>
@@ -197,7 +206,7 @@ export default function MacroKiiPage() {
       </section>
 
       <section className="mk-faq">
-        <div className="mk-section-label">07 / QUESTIONS</div>
+        <div className="mk-section-label">08 / QUESTIONS</div>
         <h2>Macro Kii, clearly.</h2>
         <div className="mk-faq-list">
           <details><summary>What is Macro Kii?</summary><p>Macro Kii is a macro-centered productivity workspace. It combines work surfaces such as notes, tasks, tables, calendars, saved text, and research with a built-in Macro Panel and Macro Key Menu.</p></details>
@@ -212,7 +221,7 @@ export default function MacroKiiPage() {
       <footer className="mk-footer">
         <span>MACRO KII / AO</span>
         <h2>Build the flow once.<br /><em>Keep the work moving.</em></h2>
-        <a href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro Kii ↗</a>
+        <a href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro Kii</a>
         <div><a href="/">Back to Akiiro</a><span>© 2026 AKIIRO</span></div>
       </footer>
     </main>

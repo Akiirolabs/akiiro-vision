@@ -4,7 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 
 const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 
-const works = [
+type Work = { src: string; title: string; tag: string; subtitle: string; href?: string };
+
+const works: Work[] = [
   { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS", subtitle: "" },
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
@@ -12,6 +14,8 @@ const works = [
   { src: "/assets/studio-a/object-05-front.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
   { src: "/assets/studio-am/object-06-approved-baseline.png", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
+  { src: "/assets/macrokii/interface-dark-workspace.png", title: "Macro Kii", tag: "Macro app", subtitle: "A macro app that connects notes, tasks, tables, calendars, research, and reusable workflows inside one continuous workspace.", href: "/macrokii" },
+  { src: "/assets/macrokii/macro-panel-filled.png", title: "Macro Panel", tag: "Macro Kii", subtitle: "One quiet control point for the actions that keep work moving.", href: "/macrokii#interface" },
 ];
 
 export default function Home() {
@@ -91,10 +95,10 @@ export default function Home() {
           <p className="eyebrow">A spatial interface for human imagination</p>
           <h1>Ideas deserve<br /><em>dimension.</em></h1>
           <p className="intro">AO Agent. Capture Intelligence.</p>
-          <a className="hero-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
-          <a className="macro-panel-button" href="https://macrokii.com" target="_blank" rel="noopener noreferrer" aria-label="Launch Macro">
-            <img src="/assets/macro-panel-button.png" alt="" />
-          </a>
+          <div className="hero-macro-links">
+            <a className="hero-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
+            <a className="hero-info" href="/macrokii#interface" aria-label="Learn about the Macro Kii interface">i</a>
+          </div>
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
@@ -122,7 +126,7 @@ export default function Home() {
         <div className="section-label light">02 / Selected objects</div>
         <div className={`gallery-stage object-${active + 1}`}>
           <div className="gallery-copy">
-            <div className="gallery-number">0{active + 1}<sup>/07</sup></div>
+            <div className="gallery-number">0{active + 1}<sup>/09</sup></div>
             <p>{selected.tag}</p>
             <h2>{selected.title}</h2>
             {selected.subtitle && <div className="gallery-subtitle">{selected.subtitle}</div>}
@@ -131,10 +135,10 @@ export default function Home() {
               <button onClick={() => setActive((active + 1) % works.length)} aria-label="Next work">→</button>
             </div>
           </div>
-          <div className={`gallery-image object-${active + 1}`} key={selected.src}>
+          <a className={`gallery-image object-${active + 1}`} key={selected.src} href={selected.href} aria-label={selected.href ? `Explore ${selected.title}` : undefined}>
             <img src={selected.src} alt={selected.title} />
             <span>A K I I R O </span>
-          </div>
+          </a>
         </div>
         <div className="gallery-strip">
           {works.map((work, index) => (
