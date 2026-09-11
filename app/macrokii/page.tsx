@@ -176,8 +176,8 @@ export default function MacroKiiPage() {
         <div className="mk-agent-media">
           <figure><img src="/assets/macrokii/verify-score-new.png" width="802" height="759" loading="lazy" alt="Macro Kii verification findings with a 90 out of 100 evidence trust score" /><figcaption>Verify / findings with evidence context</figcaption></figure>
           <div className="mk-agent-side">
+            <figure><img src="/assets/macrokii/ao-destinations-new.png" width="252" height="151" loading="lazy" alt="Alternate top Macro Panel with six main macro controls" /><figcaption>Top Macro Panel / another view, another way in</figcaption></figure>
             <figure><img src="/assets/macrokii/ao-agent-control.png" width="248" height="215" loading="lazy" alt="AO Agent control for opening the side chat or hiding the agent" /><figcaption>AO Agent / present when needed, quiet when not</figcaption></figure>
-            <figure><img src="/assets/macrokii/ao-destinations-new.png" width="252" height="151" loading="lazy" alt="Macro Kii main macros for sending work to connected destinations" /><figcaption>AO output / choose a connected macro destination</figcaption></figure>
           </div>
         </div>
       </section>
