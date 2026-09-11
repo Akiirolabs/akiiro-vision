@@ -335,25 +335,26 @@ main {
 .hero-macro-links {
   margin: 10px 0 0 31%;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .hero-info {
-  width: 24px;
-  height: 24px;
+  width: 13px;
+  height: 13px;
   display: inline-grid;
   place-items: center;
   border: 1px solid currentColor;
   border-radius: 50%;
-  font: 12px Georgia,serif;
+  font: 8px/1 var(--font-mono);
+  transform: translateY(1px);
   transition: color .2s ease,box-shadow .2s ease,transform .2s ease;
 }
 
 .hero-info:hover,.hero-info:focus-visible {
   color: #72cfff;
   box-shadow: 0 0 14px rgba(64,181,255,.68);
-  transform: translateY(-1px);
+  transform: translateY(1px) scale(1.06);
 }
 
 .hero-launch:hover,

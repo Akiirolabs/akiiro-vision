@@ -99,6 +99,9 @@ export default function Home() {
             <a className="hero-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
             <a className="hero-info" href="/macrokii#interface" aria-label="Learn about the Macro Kii interface">i</a>
           </div>
+          <a className="macro-panel-button" href="https://macrokii.com" target="_blank" rel="noopener noreferrer" aria-label="Launch Macro">
+            <img src="/assets/macro-panel-button.png" alt="" />
+          </a>
         </div>
         <div className="hero-object" style={{ transform: `translate3d(${(cursor.x - 50) * .11}px, ${(cursor.y - 50) * .08}px, 0) rotate(${(cursor.x - 50) * .025}deg)` }}>
           <div className="halo" />
