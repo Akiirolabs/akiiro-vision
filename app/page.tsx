@@ -69,7 +69,7 @@ export default function Home() {
       </nav>
 
       <aside className={`menu ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
-        <div className="menu-count">01—04 / Index</div>
+        <div className="menu-count">01-04 / Index</div>
         {menuItems.map((item, index) => (
           <a
             href={item.href}
@@ -84,7 +84,7 @@ export default function Home() {
       </aside>
 
       <section className="header-visual" id="top" aria-label="Akiiro software without limits">
-        <img src="/og-software.png" alt="Akiiro — Software without limits" />
+        <img src="/og-software.png" alt="Akiiro: Software without limits" />
         <span className="header-studio">Studio</span>
       </section>
 

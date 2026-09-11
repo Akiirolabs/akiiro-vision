@@ -175,6 +175,10 @@
   .mk-intro h2,.mk-workspace h2,.mk-agent h2,.mk-difference h2,.mk-footer h2 { font-size: 15vw; }
   .mk-intro-side { margin-top: 0; }
   .mk-lede { font-size: 16px; }
+  .mk-panel-launch:hover img,.mk-panel-launch:focus-visible img,.mk-panel-launch:active img {
+    transform: none;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,.95)) drop-shadow(0 0 14px rgba(255,255,255,.72));
+  }
   .mk-proof-panel { margin: 0 20px 90px; padding: 54px 24px; grid-template-columns: 1fr; gap: 60px; }
   .mk-proof-panel p { font-size: 16px; }
   .mk-feature-grid { grid-template-columns: 1fr; }

@@ -15,7 +15,7 @@ const scenes = [
   {
     id: "verify",
     label: "Verify",
-    note: "Review evidence in a light workspace built around the task—not a separate AI destination.",
+    note: "Review evidence in a light workspace built around the task, not a separate AI destination.",
     image: "/assets/macrokii/interface-light-verify.png",
     width: 1919,
     height: 956,

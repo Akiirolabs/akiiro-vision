@@ -3,11 +3,11 @@ import "./macrokii.css";
 import MacroInterface from "./MacroInterface";
 
 export const metadata: Metadata = {
-  title: "Macro Kii — A Macro-Powered Workspace | Akiiro",
+  title: "Macro Kii: A Macro-Powered Workspace | Akiiro",
   description: "Meet Macro Kii, a connected macro workspace for reusable workflows, tasks, tables, calendars, AO assistance, evidence verification, and transparent trust scoring.",
   alternates: { canonical: "https://akiiro.com/macrokii" },
   openGraph: {
-    title: "Macro Kii — Your entire workspace, connected through macros",
+    title: "Macro Kii: Your entire workspace, connected through macros",
     description: "A macro-centered workspace for moving ideas through notes, tasks, tables, calendars, research, and reusable workflows.",
     url: "https://akiiro.com/macrokii",
     type: "website",
@@ -89,7 +89,7 @@ export default function MacroKiiPage() {
         <div className="mk-kicker">MACRO-CENTERED WORKSPACE / 2026</div>
         <div className="mk-hero-copy">
           <h1>Your entire workspace.<br /><em>Connected through macros.</em></h1>
-          <p>Macro Kii brings notes, tasks, tables, calendars, research, saved text, and assisted work into one interface—then connects the supported paths between them through AO, the Macro Panel, and the Macro Key Menu.</p>
+          <p>Macro Kii brings notes, tasks, tables, calendars, research, saved text, and assisted work into one interface. It then connects the supported paths between them through AO, the Macro Panel, and the Macro Key Menu.</p>
           <div className="mk-actions">
             <a className="mk-primary" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Open Macro Kii</a>
             <a href="#experience">See the system ↓</a>
@@ -109,7 +109,7 @@ export default function MacroKiiPage() {
           <h2>Less switching.<br /><em>More continuity.</em></h2>
         </div>
         <div className="mk-intro-side">
-          <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard—it is part of the workspace itself.</p>
+          <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard. It is part of the workspace itself.</p>
           <a className="mk-panel-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">
             <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="" />
             <span>Open Macro Kii</span>
@@ -170,7 +170,7 @@ export default function MacroKiiPage() {
           <h2>AI supports the workflow.<br /><em>It does not define it.</em></h2>
           <div>
             <p>A quick answer can sound certain and still leave out what matters. Macro Kii’s Verify workspace uses a specialized verification model to examine claims against multiple sources, expose uncertainty, and return an evidence trust score with the reasoning kept in view.</p>
-            <p>It is built for consultants, researchers, analysts, and demanding study—work where “probably right” is not enough. The score is not a promise of infallibility. It is a clear signal of how well the available evidence supports a finding, so professionals can review the basis, recognize the limits, and move forward with greater confidence.</p>
+            <p>It is built for consultants, researchers, analysts, and demanding study where “probably right” is not enough. The score is not a promise of infallibility. It is a clear signal of how well the available evidence supports a finding, so professionals can review the basis, recognize the limits, and move forward with greater confidence.</p>
           </div>
         </div>
         <div className="mk-agent-media">
@@ -218,7 +218,7 @@ export default function MacroKiiPage() {
         <div className="mk-faq-list">
           <details><summary>What is Macro Kii?</summary><p>Macro Kii is a macro-centered productivity workspace. It combines work surfaces such as notes, tasks, tables, calendars, saved text, and research with a built-in Macro Panel and Macro Key Menu.</p></details>
           <details><summary>What does the Macro Panel do?</summary><p>It provides a persistent control point for opening macro-centered actions. The demonstrated menu includes Macro, Route, Turbo, Vault, and Preferences.</p></details>
-          <details><summary>What is the Macro Key Menu?</summary><p>The Macro Key Menu—MKM—is the organized interface for choosing reusable macros and opening connected workflow tools inside the app.</p></details>
+          <details><summary>What is the Macro Key Menu?</summary><p>The Macro Key Menu, or MKM, is the organized interface for choosing reusable macros and opening connected workflow tools inside the app.</p></details>
           <details><summary>Is Macro Kii a keyboard macro or hardware macro-pad app?</summary><p>No. The product shown here focuses on macros and content movement within its own connected workspace, not keyboard remapping, gaming macros, or programmable hardware keys.</p></details>
           <details><summary>Where can Macro Kii send content?</summary><p>The screenshots show specific destinations such as Workspace, Pages, Day Documents, To Do, Tables, Verify, Calendar, and Workspace Note. Availability depends on the workflow being used.</p></details>
           <details><summary>What role does AO Agent play?</summary><p>AO Agent is supporting functionality. It can assist beside the work and hand outputs to destinations shown in the interface; the macro framework remains the product’s center.</p></details>

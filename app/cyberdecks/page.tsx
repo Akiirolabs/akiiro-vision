@@ -5,16 +5,16 @@ const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 const productImage = "https://akiiro.com/assets/studio-a/hero-black.png";
 
 export const metadata: Metadata = {
-  title: "Studio-A Cyberdeck — Akiiro",
+  title: "Studio-A Cyberdeck | Akiiro",
   description: "Studio-A is Akiiro's compact creative system, designed for focused work beyond a fixed desk.",
   openGraph: {
-    title: "Studio-A Cyberdeck — Akiiro",
+    title: "Studio-A Cyberdeck | Akiiro",
     description: "A compact creative system built to move.",
     images: [{ url: productImage, width: 1448, height: 1086 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio-A Cyberdeck — Akiiro",
+    title: "Studio-A Cyberdeck | Akiiro",
     description: "A compact creative system built to move.",
     images: [productImage],
   },
