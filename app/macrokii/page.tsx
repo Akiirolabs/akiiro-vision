@@ -230,7 +230,7 @@ export default function MacroKiiPage() {
         <span>MACRO KII / AO</span>
         <h2>Build the flow once.<br /><em>Keep the work moving.</em></h2>
         <a href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro Kii</a>
-        <div><a href="/">Back to Akiiro</a><span>© 2026 AKIIRO</span></div>
+        <div><a href="/">Back to Akiiro</a><span><a href="/privacy">Privacy</a> / <a href="/terms">Terms</a></span><span>© 2026 AKIIRO</span></div>
       </footer>
     </main>
   );

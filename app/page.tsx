@@ -225,7 +225,7 @@ export default function Home() {
       <section className="contact" id="contact">
         <div className="contact-image"><img src="/assets/atlas-agent.gif" alt="Atlas digital agent in motion" /></div>
         <div className="contact-copy"><p>Intelligence should feel less artificial.</p><h2>Enter the<br /><em>thinking space.</em></h2><a href="mailto:hello@akiiro.co">Request access <span>↗</span></a></div>
-        <footer><a href="#top">AKIIRO®</a><span>© 2026 / ALL SYSTEMS CURIOUS</span><a href="#top">BACK TO TOP ↑</a></footer>
+        <footer><a href="#top">AKIIRO®</a><span>© 2026 / ALL SYSTEMS CURIOUS</span><div className="contact-legal"><a href="/privacy">PRIVACY</a><a href="/terms">TERMS</a></div><a href="#top">BACK TO TOP ↑</a></footer>
       </section>
     </main>
   );

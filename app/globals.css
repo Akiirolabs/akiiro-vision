@@ -1012,6 +1012,8 @@ main {
   letter-spacing: .08em;
 }
 
+.contact-legal { display: flex; gap: 18px; }
+
 @media (max-width:800px) {
   .nav {
     padding: 22px 20px;
@@ -1182,6 +1184,7 @@ main {
   .contact footer span {
     display: none;
   }
+  .contact-legal { margin-left: auto; }
 }
 
 @media (prefers-reduced-motion:reduce) {
