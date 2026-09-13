@@ -115,7 +115,6 @@ export default function AkiiroAgent() {
             <button type="submit" disabled={loading || !input.trim()}>Send</button>
           </form>
           {supportMode && supportStatus === "saved" && <p className="ak-support-status">Support record saved. A human has not reviewed it yet.</p>}
-          {supportMode && supportStatus === "failed" && <p className="ak-support-status">The support record could not be saved. Email support@akiiro.com.</p>}
           <p className="ak-agent-note">AI can make mistakes. Do not share sensitive information.</p>
         </section>
       )}
