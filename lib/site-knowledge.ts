@@ -18,7 +18,7 @@ export const knowledgeSections: KnowledgeSection[] = [
     summary: "Macro Kii is Akiiro's flagship software, a macro-centered productivity workspace that connects notes, tasks, tables, calendars, research, saved text, and assisted work in one interface.",
     points: [
       "The Macro Key Menu, called MKM, is the framework that organizes reusable macros and connected workflow tools. Akiiro streamlined that framework into the persistent Macro Panel.",
-      "The product is built around internal workflow integration. Do not expand Macro Kii as an acronym until Akiiro confirms the exact wording.",
+      "Macro Kii means Macro Key Internal Integration. The name describes its purpose: integrating the full workflow inside one connected workspace.",
       "Route moves supported content between supported sections. Turbo sends written output to destinations shown in its interface. Vault keeps saved text, presets, and reusable macros available.",
       "Workspace provides a focused, modern environment for writing, organizing, and viewing active work.",
       "To Do supports deeply nested subtasks. Dated tasks connect with Calendar and Day Documents.",
@@ -94,7 +94,7 @@ export const knowledgeSections: KnowledgeSection[] = [
 ];
 
 export const knowledgeFaqs: KnowledgeFaq[] = [
-  { question: "What is Macro Kii?", answer: "Macro Kii is Akiiro's flagship macro-centered productivity workspace. It keeps notes, deeply nested tasks, tables, calendars, Day Documents, research, saved text, and assisted work together, then connects supported actions through the Macro Panel and Macro Key Menu. Verify adds evidence-centered findings and trust scoring for work where confidence needs a visible basis." },
+  { question: "What is Macro Kii?", answer: "Macro Kii means Macro Key Internal Integration. It is Akiiro's flagship macro-centered productivity workspace, keeping notes, deeply nested tasks, tables, calendars, Day Documents, research, saved text, and assisted work together. The Macro Panel and Macro Key Menu connect supported actions, while Verify adds evidence-centered findings and trust scoring for work where confidence needs a visible basis." },
   { question: "What does the Macro Panel do?", answer: "It streamlines the Macro Key Menu framework into a persistent control point for macro-centered actions. The demonstrated interface provides access to Macro, Route, Turbo, Vault, and Preferences." },
   { question: "What is an evidence trust score?", answer: "It is a signal of how strongly the evidence examined by Verify supports a finding. Supporting context and uncertainty remain visible so a person can review the basis. It guides judgment rather than replacing it." },
   { question: "Can AO Agent guarantee that an answer is correct?", answer: "No. AI output and evidence scores can help organize and evaluate information, but neither is a guarantee. Important findings should be reviewed against their sources and professional requirements." },
