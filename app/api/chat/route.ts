@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { env } from "cloudflare:workers";
 import { eq } from "drizzle-orm";
 import { getDb } from "../../../db";
 import { supportTickets } from "../../../db/schema";
@@ -56,7 +57,8 @@ function extractAnswer(payload: unknown): string | null {
 }
 
 export async function POST(request: Request) {
-  const apiKey = process.env.OPENAI_API_KEY;
+  const runtimeEnv = env as unknown as { OPENAI_API_KEY?: string; OPENAI_MODEL?: string };
+  const apiKey = (runtimeEnv.OPENAI_API_KEY || process.env.OPENAI_API_KEY)?.trim();
   if (!apiKey) return NextResponse.json({ error: "Agent unavailable" }, { status: 503 });
 
   let body: { messages?: IncomingMessage[]; supportMode?: unknown; supportTicketId?: unknown };
@@ -115,7 +117,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: process.env.OPENAI_MODEL || "gpt-5-mini",
+        model: runtimeEnv.OPENAI_MODEL || process.env.OPENAI_MODEL || "gpt-5-mini",
         store: false,
         reasoning: { effort: "minimal" },
         instructions,
