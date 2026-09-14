@@ -93,9 +93,6 @@ export default function Home() {
         <span className="header-studio">Studio</span>
       </section>
 
-      <MacroPromo />
-      <MacroDetails />
-
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
         <div className="deck-teaser-copy">
           <span>AKIIRO HARDWARE / 001</span>
@@ -107,6 +104,14 @@ export default function Home() {
           <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
+
+      <section className="connectivity-feature" aria-label="Studio-A connectivity">
+        <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
+        <p>Built to connect. Designed to arrive.</p>
+      </section>
+
+      <MacroPromo />
+      <MacroDetails />
 
       <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>
@@ -137,11 +142,6 @@ export default function Home() {
         <p>Designed for the way you work.</p>
         <h2>Built for the way your mind <span>actually moves.</span></h2>
         <div className="manifesto-note">A living field where ideas recognize each other.</div>
-      </section>
-
-      <section className="connectivity-feature" aria-label="Studio-A connectivity">
-        <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
-        <p>Built to connect. Designed to arrive.</p>
       </section>
 
       <section className="objects" id="objects">
