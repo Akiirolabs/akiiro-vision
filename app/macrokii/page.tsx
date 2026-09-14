@@ -96,8 +96,8 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <figure className="mk-hero-visual">
-          <img src="/assets/macrokii/promo-ios/01-desktop-workspace.png" width="1920" height="1600" alt="Macro Kii desktop Workspace promo with notes, outline, and Macro Panel" />
-          <figcaption>Workspace / your next idea, connected</figcaption>
+          <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="Black Macro Kii circular Macro Panel with six workflow controls" />
+          <figcaption>The Macro Panel / one control point for the workspace</figcaption>
         </figure>
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
       </header>
@@ -111,7 +111,7 @@ export default function MacroKiiPage() {
         <div className="mk-intro-side">
           <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard. It is part of the workspace itself.</p>
           <a className="mk-panel-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/macrokii/promo-ios/07-mobile-workspace.png" width="1290" height="2796" alt="" />
+            <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="" />
             <span>Open Macro Kii</span>
           </a>
         </div>
