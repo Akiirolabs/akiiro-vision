@@ -158,13 +158,13 @@ export default function MacroKiiPage() {
         </div>
       </section>
 
-      <section className="mk-gallery" aria-label="Macro Kii product walkthrough">
-        <figure className="wide"><img src="/assets/macrokii/promo-ios/02-desktop-tasks.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop To Do promo showing nested project tasks in light mode" /><figcaption>To Do / projects, tasks, descriptions, dates</figcaption></figure>
-        <figure><img src="/assets/macrokii/promo-ios/03-desktop-tables.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Tables promo showing structured project records" /><figcaption>Tables / structured work without leaving the system</figcaption></figure>
-        <figure><img src="/assets/macrokii/promo-ios/06-desktop-calendar.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Calendar promo showing a monthly timeline" /><figcaption>Calendar / events, dated tasks, Day Documents</figcaption></figure>
+      <section className="mk-gallery" id="workflow-details" aria-label="Macro Kii workflow details">
+        <figure className="wide"><img src="/assets/macrokii/details/22-macro-panel-desktop-night.png" width="2752" height="2064" loading="lazy" alt="Macro Panel enlarged alongside the desktop workspace, showing its six shortcuts" /><figcaption>Macro Panel / the controls, up close</figcaption></figure>
+        <figure><img src="/assets/macrokii/details/42-table-tools.png" width="2752" height="2064" loading="lazy" alt="Enlarged table controls showing records, filter, sort, grouping, and columns" /><figcaption>Tables / the tools behind structured work</figcaption></figure>
+        <figure><img src="/assets/macrokii/details/18-calendar-ipad-light.png" width="2752" height="2064" loading="lazy" alt="Macro Kii calendar on iPad in light mode" /><figcaption>Calendar / a wider view of the day on iPad</figcaption></figure>
       </section>
 
-      <section className="mk-agent">
+      <section className="mk-agent" id="assistance">
         <div className="mk-section-label">04 / ASSISTANCE IN CONTEXT</div>
         <div className="mk-agent-copy">
           <h2>AI supports the workflow.<br /><em>It does not define it.</em></h2>
@@ -174,12 +174,16 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <div className="mk-agent-media">
-          <figure><img src="/assets/macrokii/promo-ios/05-desktop-verify.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Verify promo showing evidence review and supporting context" /><figcaption>Verify / findings with evidence context</figcaption></figure>
+          <figure><img src="/assets/macrokii/details/32-trust-score-midnight.png" width="2752" height="2064" loading="lazy" alt="Enlarged evidence trust score and its supporting explanation alongside Verify" /><figcaption>Verify / the trust score and the reasons behind it</figcaption></figure>
           <div className="mk-agent-side">
-            <figure><img src="/assets/macrokii/promo-ios/04-desktop-sources.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Sources promo showing research material alongside notes" /><figcaption>Sources / follow the question</figcaption></figure>
+            <figure><img src="/assets/macrokii/details/17-verify-evidence-closeup.png" width="2752" height="2064" loading="lazy" alt="Verify evidence detail enlarged beside the source workspace" /><figcaption>Evidence / look closer at the finding</figcaption></figure>
             <figure><img src="/assets/macrokii/promo-ios/12-mobile-light.png" width="1290" height="2796" loading="lazy" alt="Macro Kii mobile Workspace promo in light mode with AO and Macro Panel controls" /><figcaption>Mobile / a lighter way to focus</figcaption></figure>
           </div>
         </div>
+      </section>
+
+      <section className="mk-gallery" aria-label="AO Agent in detail">
+        <figure className="wide"><img src="/assets/macrokii/details/28-agent-desktop-light.png" width="2752" height="2064" loading="lazy" alt="AO Agent response enlarged beside the document in light mode" /><figcaption>AO Agent / a closer look at assistance beside your work</figcaption></figure>
       </section>
 
       <section className="mk-difference">

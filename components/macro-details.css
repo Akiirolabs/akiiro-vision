@@ -1,0 +1,14 @@
+.home-macro-details { position:relative; padding:64px 5vw; background:#080e16; color:#edf4fa; }
+.home-macro-details header { max-width:1200px; margin:0 auto 32px; }
+.home-macro-details header p,.home-macro-details small { color:#6cb8ff; font-size:12px; letter-spacing:.1em; }
+.home-macro-details h2 { font-size:clamp(28px,4vw,52px); line-height:1.1; margin:16px 0; }
+.home-macro-details header a { color:#b6dfff; }
+.home-macro-details-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; max-width:1200px; margin:auto; }
+.home-macro-details-grid > a { overflow:hidden; color:inherit; text-decoration:none; border:1px solid #263546; border-radius:18px; background:#101923; }
+.home-macro-details-grid img { display:block; width:100%; height:auto; }
+.home-macro-details-grid a > div { padding:24px; }
+.home-macro-details h3 { font-size:24px; margin:12px 0; }
+.home-macro-details-grid p { color:#b5c1cf; line-height:1.6; }
+.home-macro-details a:focus-visible { outline:2px solid #72c5ff; outline-offset:4px; }
+.gallery-image:is(.object-10,.object-11,.object-12) img { object-fit:contain; background:#080e16; }
+@media(max-width:650px) { .home-macro-details { padding:40px 20px; } .home-macro-details-grid { grid-template-columns:1fr; } }

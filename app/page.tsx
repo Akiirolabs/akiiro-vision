@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import MacroPromo from "../components/MacroPromo";
+import MacroDetails from "../components/MacroDetails";
 
 const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 
@@ -17,6 +18,9 @@ const works: Work[] = [
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
+  { src: "/assets/macrokii/details/32-trust-score-midnight.png", title: "Verify, in detail", tag: "Macro Kii / Verify", subtitle: "Review the score and the evidence behind it.", href: "/macrokii#assistance" },
+  { src: "/assets/macrokii/details/42-table-tools.png", title: "Research, structured", tag: "Macro Kii / Tables", subtitle: "Records, reviewers, and status in one working view.", href: "/macrokii#workflow-details" },
+  { src: "/assets/macrokii/details/28-agent-desktop-light.png", title: "AO, beside your work", tag: "Macro Kii / AO Agent", subtitle: "Keep the conversation close to the document.", href: "/macrokii#assistance" },
 ];
 
 export default function Home() {
@@ -89,6 +93,9 @@ export default function Home() {
         <span className="header-studio">Studio</span>
       </section>
 
+      <MacroPromo />
+      <MacroDetails />
+
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
         <div className="deck-teaser-copy">
           <span>AKIIRO HARDWARE / 001</span>
@@ -100,8 +107,6 @@ export default function Home() {
           <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
-
-      <MacroPromo />
 
       <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>
@@ -143,7 +148,7 @@ export default function Home() {
         <div className="section-label light">02 / Selected objects</div>
         <div className={`gallery-stage object-${active + 1}`}>
           <div className="gallery-copy">
-            <div className="gallery-number">0{active + 1}<sup>/09</sup></div>
+            <div className="gallery-number">{String(active + 1).padStart(2, "0")}<sup>/{works.length}</sup></div>
             <p>{selected.tag}</p>
             <h2>{selected.title}</h2>
             {selected.subtitle && <div className="gallery-subtitle">{selected.subtitle}</div>}
@@ -167,7 +172,7 @@ export default function Home() {
         <div className="gallery-strip">
           {works.map((work, index) => (
             <button type="button" key={work.src} className={index === active ? "active" : ""} onClick={() => selectWork(index)} aria-label={`View ${work.title}`}>
-              <img src={work.src} alt="" /><span>0{index + 1}</span>
+              <img src={work.src} alt="" /><span>{String(index + 1).padStart(2, "0")}</span>
             </button>
           ))}
         </div>
