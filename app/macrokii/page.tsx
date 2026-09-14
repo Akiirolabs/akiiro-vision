@@ -96,7 +96,7 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <figure className="mk-hero-visual">
-          <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="Black Macro Kii circular Macro Panel with six workflow controls" />
+          <img src="/assets/macrokii/macro-panel-filled.png" width="218" height="240" alt="Teal-toned Macro Kii circular Macro Panel with six workflow controls" />
           <figcaption>The Macro Panel / one control point for the workspace</figcaption>
         </figure>
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
