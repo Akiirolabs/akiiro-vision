@@ -714,18 +714,18 @@ main {
   object-position: center bottom;
 }
 
-.gallery-image.object-5 img {
+.gallery-image.object-7 img {
   object-fit: contain;
   background: #05070a;
 }
 
-.gallery-image.object-6 {
+.gallery-image.object-8 {
   display: grid;
   place-items: center;
   background: radial-gradient(circle,rgba(31,121,170,.24),transparent 42%),#05070a;
 }
 
-.gallery-image.object-6 img {
+.gallery-image.object-8 img {
   width: min(58%,430px);
   height: auto;
   object-fit: contain;

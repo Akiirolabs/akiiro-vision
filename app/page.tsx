@@ -10,13 +10,13 @@ type Work = { src: string; title: string; tag: string; subtitle: string; href?: 
 
 const works: Work[] = [
   { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS", subtitle: "" },
+  { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
+  { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
   { src: "/assets/studio-a/object-05-front.jpeg", title: "Studio-A Connectivity", tag: "Product", subtitle: "" },
   { src: "/assets/studio-am/object-06-approved-baseline.png", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
   { src: "/assets/macrokii/interface-dark-workspace.png", title: "Macro Kii", tag: "Macro app", subtitle: "A macro app that connects notes, tasks, tables, calendars, research, and reusable workflows inside one continuous workspace.", href: "/macrokii" },
   { src: "/assets/macrokii/macro-panel-filled.png", title: "Macro Panel", tag: "Macro Kii", subtitle: "One quiet control point for the actions that keep work moving.", href: "/macrokii#interface" },
-  { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
-  { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
   { src: "/assets/macrokii/details/32-trust-score-midnight.png", title: "Verify, in detail", tag: "Macro Kii / Verify", subtitle: "Review the score and the evidence behind it.", href: "/macrokii#assistance" },
   { src: "/assets/macrokii/details/42-table-tools.png", title: "Research, structured", tag: "Macro Kii / Tables", subtitle: "Records, reviewers, and status in one working view.", href: "/macrokii#workflow-details" },
@@ -93,6 +93,11 @@ export default function Home() {
         <span className="header-studio">Studio</span>
       </section>
 
+      <section className="connectivity-feature" aria-label="Studio-A connectivity">
+        <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
+        <p>Built to connect. Designed to arrive.</p>
+      </section>
+
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
         <div className="deck-teaser-copy">
           <span>AKIIRO HARDWARE / 001</span>
@@ -104,11 +109,6 @@ export default function Home() {
           <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
-
-      <section className="connectivity-feature" aria-label="Studio-A connectivity">
-        <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
-        <p>Built to connect. Designed to arrive.</p>
-      </section>
 
       <MacroPromo />
       <MacroDetails />
