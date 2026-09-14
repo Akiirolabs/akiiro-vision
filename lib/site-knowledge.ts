@@ -1,3 +1,5 @@
+import { supportGroups } from "./support-faqs";
+
 export type KnowledgeSection = { title: string; summary: string; points: string[] };
 export type KnowledgeFaq = { question: string; answer: string };
 
@@ -110,4 +112,6 @@ export const agentKnowledge = [
   ...knowledgeSections.flatMap((section) => [section.title, section.summary, ...section.points]),
   "Frequently asked questions:",
   ...knowledgeFaqs.flatMap((faq) => [`Q: ${faq.question}`, `A: ${faq.answer}`]),
+  "Public product FAQs and troubleshooting are available at /support.",
+  ...supportGroups.flatMap((group) => [group.title, ...group.faqs.flatMap((faq) => [`Q: ${faq.question}`, `A: ${faq.answer}`])]),
 ].join("\n");

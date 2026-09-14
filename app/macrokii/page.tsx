@@ -17,30 +17,30 @@ export const metadata: Metadata = {
 const featureCards = [
   {
     number: "01",
-    title: "Route",
-    body: "Choose a source item and a supported destination, then move work between sections without rebuilding it by hand.",
-    image: "/assets/macrokii/route-new.png",
-    width: 346,
-    height: 306,
-    alt: "Macro Kii Route panel with source section, source item, and destination section controls",
+    title: "To Do",
+    body: "Keep tasks, nested work, and dates together wherever you are working.",
+    image: "/assets/macrokii/promo-ios/09-mobile-tasks.png",
+    width: 1290,
+    height: 2796,
+    alt: "Macro Kii mobile To Do promo showing nested tasks in light mode",
   },
   {
     number: "02",
-    title: "Turbo",
-    body: "Write once, choose from the destinations shown in the interface, and add the result to Workspace, Pages, or Day Documents.",
-    image: "/assets/macrokii/turbo-new.png",
-    width: 349,
-    height: 303,
-    alt: "Macro Kii Turbo panel offering Workspace, Pages, and Day Documents as destinations",
+    title: "Sources",
+    body: "Bring research notes and source material into view alongside the work they support.",
+    image: "/assets/macrokii/promo-ios/10-mobile-sources.png",
+    width: 1290,
+    height: 2796,
+    alt: "Macro Kii mobile Sources promo showing research notes and source material",
   },
   {
     number: "03",
-    title: "Vault",
-    body: "Keep saved text, presets, and reusable macros ready for the moment a repeated workflow returns.",
-    image: "/assets/macrokii/vault-new.png",
-    width: 334,
-    height: 606,
-    alt: "Macro Kii Vault showing saved macros, text presets, and workflow filters",
+    title: "Your day",
+    body: "Bring reading notes, priorities, and next steps into a Day Document that stays with you.",
+    image: "/assets/macrokii/promo-ios/11-mobile-day.png",
+    width: 1290,
+    height: 2796,
+    alt: "Macro Kii mobile Day Document promo showing a daily plan and reading checklist",
   },
 ];
 
@@ -71,7 +71,7 @@ const schema = {
     "Evidence trust scoring with source context",
     "AO Agent output handoffs",
   ],
-  screenshot: "https://akiiro.com/assets/macrokii/tables.png",
+  screenshot: "https://akiiro.com/assets/macrokii/promo-ios/03-desktop-tables.png",
 };
 
 export default function MacroKiiPage() {
@@ -96,8 +96,8 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <figure className="mk-hero-visual">
-          <img src="/assets/macrokii/macro-panel-filled.png" width="218" height="240" alt="Macro Kii circular Macro Panel with six workflow controls" />
-          <figcaption>The Macro Panel / one control point for the workspace</figcaption>
+          <img src="/assets/macrokii/promo-ios/01-desktop-workspace.png" width="1920" height="1600" alt="Macro Kii desktop Workspace promo with notes, outline, and Macro Panel" />
+          <figcaption>Workspace / your next idea, connected</figcaption>
         </figure>
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
       </header>
@@ -111,7 +111,7 @@ export default function MacroKiiPage() {
         <div className="mk-intro-side">
           <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard. It is part of the workspace itself.</p>
           <a className="mk-panel-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="" />
+            <img src="/assets/macrokii/promo-ios/07-mobile-workspace.png" width="1290" height="2796" alt="" />
             <span>Open Macro Kii</span>
           </a>
         </div>
@@ -119,8 +119,8 @@ export default function MacroKiiPage() {
 
       <section className="mk-proof-panel">
         <figure>
-          <img src="/assets/macrokii/macro-key-menu.png" width="360" height="288" loading="lazy" alt="Macro Key Menu with Macro, Route, Turbo, Vault, and Preferences" />
-          <figcaption>Macro Key Menu / Macro, Route, Turbo, Vault, Preferences</figcaption>
+          <img src="/assets/macrokii/promo-ios/08-mobile-outline.png" width="1290" height="2796" loading="lazy" alt="Macro Kii mobile workspace with an open document outline and Macro Panel" />
+          <figcaption>Mobile workspace / your next thought within reach</figcaption>
         </figure>
         <div>
           <span>AO / AKIIRO OPERATOR</span>
@@ -159,9 +159,9 @@ export default function MacroKiiPage() {
       </section>
 
       <section className="mk-gallery" aria-label="Macro Kii product walkthrough">
-        <figure className="wide"><img src="/assets/macrokii/tasks.png" width="1920" height="953" loading="lazy" alt="Macro Kii To Do workspace with project tasks, descriptions, and due date controls" /><figcaption>To Do / projects, tasks, descriptions, dates</figcaption></figure>
-        <figure><img src="/assets/macrokii/tables.png" width="885" height="493" loading="lazy" alt="Macro Kii Tables workspace with projects and structured fields" /><figcaption>Tables / structured work without leaving the system</figcaption></figure>
-        <figure><img src="/assets/macrokii/calendar.png" width="1920" height="958" loading="lazy" alt="Macro Kii calendar displaying events, tasks, and Day Documents" /><figcaption>Calendar / events, dated tasks, Day Documents</figcaption></figure>
+        <figure className="wide"><img src="/assets/macrokii/promo-ios/02-desktop-tasks.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop To Do promo showing nested project tasks in light mode" /><figcaption>To Do / projects, tasks, descriptions, dates</figcaption></figure>
+        <figure><img src="/assets/macrokii/promo-ios/03-desktop-tables.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Tables promo showing structured project records" /><figcaption>Tables / structured work without leaving the system</figcaption></figure>
+        <figure><img src="/assets/macrokii/promo-ios/06-desktop-calendar.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Calendar promo showing a monthly timeline" /><figcaption>Calendar / events, dated tasks, Day Documents</figcaption></figure>
       </section>
 
       <section className="mk-agent">
@@ -174,10 +174,10 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <div className="mk-agent-media">
-          <figure><img src="/assets/macrokii/verify-score-new.png" width="802" height="759" loading="lazy" alt="Macro Kii verification findings with a 90 out of 100 evidence trust score" /><figcaption>Verify / findings with evidence context</figcaption></figure>
+          <figure><img src="/assets/macrokii/promo-ios/05-desktop-verify.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Verify promo showing evidence review and supporting context" /><figcaption>Verify / findings with evidence context</figcaption></figure>
           <div className="mk-agent-side">
-            <figure><img src="/assets/macrokii/ao-destinations-new.png" width="252" height="151" loading="lazy" alt="Alternate top Macro Panel with six main macro controls" /><figcaption>Top Macro Panel / another view, another way in</figcaption></figure>
-            <figure><img src="/assets/macrokii/ao-agent-control.png" width="248" height="215" loading="lazy" alt="AO Agent control for opening the side chat or hiding the agent" /><figcaption>AO Agent / present when needed, quiet when not</figcaption></figure>
+            <figure><img src="/assets/macrokii/promo-ios/04-desktop-sources.png" width="1920" height="1600" loading="lazy" alt="Macro Kii desktop Sources promo showing research material alongside notes" /><figcaption>Sources / follow the question</figcaption></figure>
+            <figure><img src="/assets/macrokii/promo-ios/12-mobile-light.png" width="1290" height="2796" loading="lazy" alt="Macro Kii mobile Workspace promo in light mode with AO and Macro Panel controls" /><figcaption>Mobile / a lighter way to focus</figcaption></figure>
           </div>
         </div>
       </section>
@@ -230,7 +230,7 @@ export default function MacroKiiPage() {
         <span>MACRO KII / AO</span>
         <h2>Build the flow once.<br /><em>Keep the work moving.</em></h2>
         <a href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro Kii</a>
-        <div><a href="/">Back to Akiiro</a><span><a href="/privacy">Privacy</a> / <a href="/terms">Terms</a></span><span>© 2026 AKIIRO</span></div>
+        <div><a href="/">Back to Akiiro</a><span><a href="/support">Support</a> / <a href="/privacy">Privacy</a> / <a href="/terms">Terms</a></span><span>© 2026 AKIIRO</span></div>
       </footer>
     </main>
   );

@@ -129,7 +129,7 @@ export default function CyberdecksPage() {
 
       <footer className="deck-footer">
         <a href="/">AKIIRO®</a>
-        <span><a href="/privacy">PRIVACY</a> / <a href="/terms">TERMS</a></span>
+        <span><a href="/support">SUPPORT</a> / <a href="/privacy">PRIVACY</a> / <a href="/terms">TERMS</a></span>
         <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </main>
