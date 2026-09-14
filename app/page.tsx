@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import MacroPromo from "../components/MacroPromo";
 
 const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 
@@ -99,6 +100,8 @@ export default function Home() {
           <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
+
+      <MacroPromo />
 
       <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>
