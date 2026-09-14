@@ -12,6 +12,7 @@
 
 .mk-page a { color: inherit; text-decoration: none; }
 .mk-page h1,.mk-page h2,.mk-page h3,.mk-page p,.mk-page figure { margin: 0; }
+.mk-page .mk-lowercase { text-transform: lowercase; }
 .mk-page em { font-family: Georgia,serif; font-weight: 400; }
 
 .mk-nav {

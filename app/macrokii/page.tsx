@@ -91,7 +91,7 @@ export default function MacroKiiPage() {
           <h1>Your entire workspace.<br /><em>Connected through macros.</em></h1>
           <p>Macro Kii brings notes, tasks, tables, calendars, research, saved text, and assisted work into one interface. It then connects the supported paths between them through AO, the Macro Panel, and the Macro Key Menu.</p>
           <div className="mk-actions">
-            <a className="mk-primary" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Open Macro Kii</a>
+            <a className="mk-primary" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Open Macro K<span className="mk-lowercase">ii</span></a>
             <a href="#experience">See the system ↓</a>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function MacroKiiPage() {
           <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard. It is part of the workspace itself.</p>
           <a className="mk-panel-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">
             <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="" />
-            <span>Open Macro Kii</span>
+            <span>Open Macro K<span className="mk-lowercase">ii</span></span>
           </a>
         </div>
       </section>
