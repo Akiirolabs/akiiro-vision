@@ -9,6 +9,8 @@ const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 type Work = { src: string; title: string; tag: string; subtitle: string; href?: string };
 
 const works: Work[] = [
+  { src: "/assets/macrokii/details/27-ao-control-phone-dark.png", title: "Small control. Big possibilities.", tag: "Macro Kii / iPhone", subtitle: "The AO Macro Key Menu, within reach.", href: "/macrokii#desktop-details" },
+  { src: "/assets/macrokii/details/24-macro-panel-phone-light.png", title: "Less searching. More doing.", tag: "Macro Kii / iPhone", subtitle: "Your go-to shortcuts, close to the work.", href: "/macrokii#desktop-details" },
   { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS", subtitle: "" },
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
@@ -98,6 +100,9 @@ export default function Home() {
         <p>Built to connect. Designed to arrive.</p>
       </section>
 
+      <MacroPromo />
+      <MacroDetails />
+
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
         <div className="deck-teaser-copy">
           <span>AKIIRO HARDWARE / 001</span>
@@ -109,9 +114,6 @@ export default function Home() {
           <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
-
-      <MacroPromo />
-      <MacroDetails />
 
       <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>

@@ -709,23 +709,23 @@ main {
   margin-top: 0;
 }
 
-.gallery-image.object-1 img {
+.gallery-image.object-3 img {
   object-fit: cover;
   object-position: center bottom;
 }
 
-.gallery-image.object-7 img {
+.gallery-image.object-9 img {
   object-fit: contain;
   background: #05070a;
 }
 
-.gallery-image.object-8 {
+.gallery-image.object-10 {
   display: grid;
   place-items: center;
   background: radial-gradient(circle,rgba(31,121,170,.24),transparent 42%),#05070a;
 }
 
-.gallery-image.object-8 img {
+.gallery-image.object-10 img {
   width: min(58%,430px);
   height: auto;
   object-fit: contain;

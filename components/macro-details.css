@@ -10,5 +10,23 @@
 .home-macro-details h3 { font-size:24px; margin:12px 0; }
 .home-macro-details-grid p { color:#b5c1cf; line-height:1.6; }
 .home-macro-details a:focus-visible { outline:2px solid #72c5ff; outline-offset:4px; }
-.gallery-image:is(.object-10,.object-11,.object-12) img { object-fit:contain; background:#080e16; }
+.gallery-image:is(.object-1,.object-2,.object-12,.object-13,.object-14) img { object-fit:contain; background:#080e16; }
+.gallery-image:is(.object-1,.object-2,.object-3,.object-4,.object-5) {
+  display:grid;
+  place-items:center;
+  min-height:480px;
+  background:#080e16;
+}
+.gallery-image:is(.object-1,.object-2,.object-3,.object-4,.object-5) img {
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:220px;
+  max-height:440px;
+  object-fit:contain;
+}
+@media(max-width:650px) {
+  .gallery-image:is(.object-1,.object-2,.object-3,.object-4,.object-5) { min-height:340px; }
+  .gallery-image:is(.object-1,.object-2,.object-3,.object-4,.object-5) img { max-width:150px; max-height:310px; }
+}
 @media(max-width:650px) { .home-macro-details { padding:40px 20px; } .home-macro-details-grid { grid-template-columns:1fr; } }

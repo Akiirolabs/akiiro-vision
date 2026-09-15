@@ -1,0 +1,10 @@
+.mk-desktop-details { padding:60px 5vw; background:#0b131c; color:#eef5fb; scroll-margin-top:80px; }
+.mk-desktop-details h2 { font-size:clamp(28px,4vw,48px); margin:0 0 24px; }
+.mk-desktop-details figure { max-width:1100px; margin:24px auto; }
+.mk-desktop-details img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; border-radius:16px; }
+.mk-desktop-details figcaption { padding:16px 0; line-height:1.5; }
+.mk-desktop-choices,.mk-desktop-controls { display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; }
+.mk-desktop-details button { min-height:44px; min-width:44px; padding:10px 18px; border:1px solid #496079; border-radius:24px; background:transparent; color:inherit; cursor:pointer; }
+.mk-desktop-details button[aria-pressed="true"],.mk-desktop-details button:hover { background:#203e58; border-color:#7fcaff; }
+.mk-desktop-details button:focus-visible { outline:2px solid #7fcaff; outline-offset:4px; }
+@media(max-width:600px) { .mk-desktop-details { padding:36px 20px; } .mk-desktop-choices { gap:8px; } .mk-desktop-details button { font-size:12px; } }
