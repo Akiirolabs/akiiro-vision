@@ -267,6 +267,12 @@ main {
   text-transform: uppercase;
 }
 
+.connectivity-feature p.connectivity-model {
+  left: auto;
+  right: 4vw;
+  text-align: right;
+}
+
 .hero {
   position: relative;
   min-height: 100svh;

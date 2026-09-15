@@ -98,6 +98,7 @@ export default function Home() {
       <section className="connectivity-feature" aria-label="Studio-A connectivity">
         <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
         <p>Built to connect. Designed to arrive.</p>
+        <p className="connectivity-model">Studio A / White</p>
       </section>
 
       <MacroPromo />
