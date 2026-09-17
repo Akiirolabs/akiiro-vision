@@ -30,3 +30,23 @@
   .gallery-image:is(.object-1,.object-2,.object-3,.object-4,.object-5) img { max-width:150px; max-height:310px; }
 }
 @media(max-width:650px) { .home-macro-details { padding:40px 20px; } .home-macro-details-grid { grid-template-columns:1fr; } }
+
+.gallery-image:is(.object-3,.object-4) {
+  background:#d4d4d4;
+}
+.gallery-image.object-5 {
+  background:#fff;
+}
+.gallery-image.object-5 img {
+  max-width:min(320px,85%);
+  max-height:460px;
+}
+.gallery-image:is(.object-3,.object-4,.object-5) span {
+  color:#333;
+}
+@media(max-width:650px) {
+  .gallery-image.object-5 img {
+    max-width:min(230px,85%);
+    max-height:320px;
+  }
+}

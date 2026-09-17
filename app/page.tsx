@@ -20,7 +20,7 @@ const works: Work[] = [
   { src: "/assets/macrokii/interface-dark-workspace.png", title: "Macro Kii", tag: "Macro app", subtitle: "A macro app that connects notes, tasks, tables, calendars, research, and reusable workflows inside one continuous workspace.", href: "/macrokii" },
   { src: "/assets/macrokii/macro-panel-filled.png", title: "Macro Panel", tag: "Macro Kii", subtitle: "One quiet control point for the actions that keep work moving.", href: "/macrokii#interface" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
-  { src: "/assets/macrokii/details/32-trust-score-midnight.png", title: "Verify, in detail", tag: "Macro Kii / Verify", subtitle: "Review the score and the evidence behind it.", href: "/macrokii#assistance" },
+  { src: "/assets/macrokii/details/32-trust-score-midnight-single-score.png", title: "Verify, in detail", tag: "Macro Kii / Verify", subtitle: "Review the score and the evidence behind it.", href: "/macrokii#assistance" },
   { src: "/assets/macrokii/details/42-table-tools.png", title: "Research, structured", tag: "Macro Kii / Tables", subtitle: "Records, reviewers, and status in one working view.", href: "/macrokii#workflow-details" },
   { src: "/assets/macrokii/details/28-agent-desktop-light.png", title: "AO, beside your work", tag: "Macro Kii / AO Agent", subtitle: "Keep the conversation close to the document.", href: "/macrokii#assistance" },
 ];

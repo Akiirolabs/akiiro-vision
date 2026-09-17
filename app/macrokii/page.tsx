@@ -176,7 +176,7 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <div className="mk-agent-media">
-          <figure><img src="/assets/macrokii/details/32-trust-score-midnight.png" width="1448" height="1086" loading="lazy" alt="Enlarged evidence trust score and its supporting explanation alongside Verify" /><figcaption>Verify / the trust score and the reasons behind it</figcaption></figure>
+          <figure><img src="/assets/macrokii/details/32-trust-score-midnight-single-score.png" width="1448" height="1086" loading="lazy" alt="Enlarged evidence trust score and its supporting explanation alongside Verify" /><figcaption>Verify / the trust score and the reasons behind it</figcaption></figure>
           <div className="mk-agent-side">
             <figure><img src="/assets/macrokii/details/17-verify-evidence-closeup.png" width="2752" height="2064" loading="lazy" alt="Verify evidence detail enlarged beside the source workspace" /><figcaption>Evidence / look closer at the finding</figcaption></figure>
             <figure><img src="/assets/macrokii/promo-ios/12-mobile-light.png" width="1290" height="2796" loading="lazy" alt="Macro Kii mobile Workspace promo in light mode with AO and Macro Panel controls" /><figcaption>Mobile / a lighter way to focus</figcaption></figure>
