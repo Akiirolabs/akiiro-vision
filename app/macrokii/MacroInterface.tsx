@@ -16,9 +16,9 @@ const scenes = [
     id: "verify",
     label: "Verify",
     note: "Review evidence and supporting sources alongside the work.",
-    image: "/assets/macrokii/promo-ios/05-desktop-verify.png",
-    width: 1920,
-    height: 1600,
+    image: "/assets/macrokii/details/verify-working-state.png",
+    width: 1374,
+    height: 1145,
     mode: "dark",
   },
   {
