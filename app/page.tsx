@@ -54,10 +54,10 @@ export default function Home() {
   }, [active]);
 
   const menuItems = [
-    { label: "Home", href: "#top" },
-    { label: "Products", href: "#objects" },
-    { label: "Macro Kii", href: "/macrokii" },
-    { label: "Cyberdecks", href: "/cyberdecks" },
+    { label: "Home", href: "#top", external: false },
+    { label: "Products", href: "#objects", external: false },
+    { label: "Macro Kii", href: "/macrokii", external: false },
+    { label: "Cyberdecks", href: "/cyberdecks", external: false },
   ];
 
   return (
@@ -187,7 +187,7 @@ export default function Home() {
         <div className="system-grid">
           {[
             { number: '01', title: 'App Store', description: 'Download Akiiro Studio App for Productivity', href: 'https://apps.apple.com/us/app/akiiro/id6746683780', external: true },
-            { number: '02', title: 'Akiiro IO', description: 'Try Akiiro IO Here ', href: 'https://app.akiiro.com', external: true },
+            { number: '02', title: 'Akiiro IO', description: 'Try Akiiro IO Here ', href: 'https://io.akiiro.com', external: true },
             { number: '03', title: 'Akiiro 3D [Beta]', description: 'Shape complexity into something clear.', href: 'https://3d.akiiro.com', external: true },
             { number: '04', title: 'CyberDeck: Studio-A', description: 'Built for Mobility and Efficiency', href: '/cyberdecks', external: false },
             { number: '05', title: 'Macro Kii', description: 'A macro app that streamlines every workflow. Type less and do more. Powered by AO using MKM frameworks.', href: '/macrokii', external: false },
