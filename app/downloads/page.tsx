@@ -20,7 +20,7 @@ export default function DownloadsPage() {
         <p className="download-version">Apple Silicon · Version 1.1.1 · .dmg</p>
         <details className="download-help">
           <summary>Installation instructions</summary>
-          <ol><li>Download the installer using the button above.</li><li>Open Macro-Kii-1.1.1-mac-arm64.dmg from your Downloads folder.</li><li>Follow the installer’s instructions, then open Macro Kii.</li></ol>
+          <ol><li>Download the installer using the button above.</li><li>Open Macro-Kii-1.1.2-mac-arm64.dmg from your Downloads folder.</li><li>Follow the installer’s instructions, then open Macro Kii.</li></ol>
           <p>This download is for Apple Silicon Macs, not Intel Macs. Need help? <a href="/support">Visit support</a>.</p>
         </details>
       </section>
