@@ -16,8 +16,8 @@ export default function DownloadsPage() {
         <p className="download-eyebrow">YOUR WORKSPACE, WITH YOU.</p>
         <h1 id="download-title">Macro Kii.</h1>
         <p className="download-intro">A little less switching.<br />A little more room to think.</p>
-        <a className="download-installer" href="https://downloads.akiiro.com/Macro-Kii-1.1.1-mac-arm64.dmg">Download for Mac <span>↓</span></a>
-        <p className="download-version">Apple Silicon · Version 1.1.1 · .dmg</p>
+        <a className="download-installer" href="https://downloads.akiiro.com/Macro-Kii-1.1.2-mac-arm64.dmg">Download for Mac <span>↓</span></a>
+        <p className="download-version">Apple Silicon · Version 1.1.2 · .dmg</p>
         <details className="download-help">
           <summary>Installation instructions</summary>
           <ol><li>Download the installer using the button above.</li><li>Open Macro-Kii-1.1.2-mac-arm64.dmg from your Downloads folder.</li><li>Follow the installer’s instructions, then open Macro Kii.</li></ol>
