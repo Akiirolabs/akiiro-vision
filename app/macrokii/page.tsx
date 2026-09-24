@@ -83,7 +83,7 @@ export default function MacroKiiPage() {
       <nav className="mk-nav" aria-label="Macro Kii navigation">
         <a href="/" className="mk-brand">AKIIRO®</a>
         <span>AO / ADVANCED OPERATOR</span>
-        <a href="https://downloads.akiiro.com" target="_blank" rel="noopener noreferrer">Download Macro Kii</a>
+        <a href="/downloads">Download Macro Kii</a>
       </nav>
 
       <header className="mk-hero">
@@ -92,12 +92,12 @@ export default function MacroKiiPage() {
           <h1>Your entire workspace.<br /><em>Connected through macros.</em></h1>
           <p>Macro Kii brings notes, tasks, tables, calendars, research, saved text, and assisted work into one interface. It then connects the supported paths between them through AO, the Macro Panel, and the Macro Key Menu.</p>
           <div className="mk-actions">
-            <a className="mk-primary" href="https://downloads.akiiro.com" target="_blank" rel="noopener noreferrer">Download Macro K<span className="mk-lowercase">ii</span></a>
+            <a className="mk-primary" href="/downloads">Download Macro K<span className="mk-lowercase">ii</span></a>
             <a href="#experience">See the system ↓</a>
           </div>
         </div>
         <figure className="mk-hero-visual">
-          <a className="mk-panel-download" href="https://downloads.akiiro.com" aria-label="Download Macro Kii"><img src="/assets/macrokii/macro-panel-filled.png" width="218" height="240" alt="Teal-toned Macro Kii circular Macro Panel with six workflow controls" /></a>
+          <a className="mk-panel-download" href="/downloads" aria-label="Download Macro Kii"><img src="/assets/macrokii/macro-panel-filled.png" width="218" height="240" alt="Teal-toned Macro Kii circular Macro Panel with six workflow controls" /></a>
           <figcaption>The Macro Panel / one control point for the workspace</figcaption>
         </figure>
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
@@ -111,7 +111,7 @@ export default function MacroKiiPage() {
         </div>
         <div className="mk-intro-side">
           <p className="mk-lede">The Macro Panel stays close to the work. Open the Macro Key Menu, start a route, add content through Turbo, or return to saved workflows in the Vault. The interface is not a separate automation dashboard. It is part of the workspace itself.</p>
-          <a className="mk-panel-launch" href="https://downloads.akiiro.com" target="_blank" rel="noopener noreferrer">
+          <a className="mk-panel-launch" href="/downloads">
             <img src="/assets/macrokii/macro-panel-outline.png" width="337" height="303" alt="" />
             <span>Download Macro K<span className="mk-lowercase">ii</span></span>
           </a>

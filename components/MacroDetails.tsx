@@ -10,7 +10,7 @@ const details = [
 export default function MacroDetails() {
   return (
     <section className="home-macro-details" aria-labelledby="macro-details-title">
-      <header><p>MACRO Kii / A CLOSER LOOK</p><h2 id="macro-details-title">The details make the difference.</h2><a href="https://downloads.akiiro.com">Download Macro Kii</a></header>
+      <header><p>MACRO Kii / A CLOSER LOOK</p><h2 id="macro-details-title">The details make the difference.</h2><a href="/downloads">Download Macro Kii</a></header>
       <div className="home-macro-details-grid">
         {details.map(([file, label, title, description]) => (
           <a href="/macrokii" key={file}>
