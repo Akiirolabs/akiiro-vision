@@ -10,6 +10,11 @@
 .home-macro-details h3 { font-size:24px; margin:12px 0; }
 .home-macro-details-grid p { color:#b5c1cf; line-height:1.6; }
 .home-macro-details a:focus-visible { outline:2px solid #72c5ff; outline-offset:4px; }
+.home-table-detail { display:none; }
+@media(min-width:651px) {
+  .home-table-detail { display:block; border-top:1px solid #263546; margin:12px 24px 24px; }
+  .home-table-detail img { margin-top:24px; border-radius:12px; }
+}
 .gallery-image:is(.object-1,.object-2,.object-12,.object-13,.object-14) img { object-fit:contain; background:#080e16; }
 .gallery-image:is(.object-1,.object-2,.object-3,.object-4,.object-5) {
   display:grid;

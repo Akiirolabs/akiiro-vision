@@ -9,8 +9,8 @@ const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 type Work = { src: string; title: string; tag: string; subtitle: string; href?: string };
 
 const works: Work[] = [
-  { src: "/assets/macrokii/details/27-ao-control-phone-dark.png", title: "Small control. Big possibilities.", tag: "Macro Kii / iPhone", subtitle: "The AO Macro Key Menu, within reach.", href: "/macrokii#desktop-details" },
-  { src: "/assets/macrokii/details/24-macro-panel-phone-light.png", title: "Less searching. More doing.", tag: "Macro Kii / iPhone", subtitle: "Your go-to shortcuts, close to the work.", href: "/macrokii#desktop-details" },
+  { src: "/assets/macrokii/details/27-ao-control-phone-dark.png", title: "Small control. Big possibilities.", tag: "Macro Kii / iPhone", subtitle: "The AO Macro Key Menu, within reach.", href: "/macrokii" },
+  { src: "/assets/macrokii/details/24-macro-panel-phone-light.png", title: "Less searching. More doing.", tag: "Macro Kii / iPhone", subtitle: "Your go-to shortcuts, close to the work.", href: "/macrokii" },
   { src: "/assets/iphoneapp.png", title: "Mind Map App on IOS", tag: "IOS", subtitle: "" },
   { src: "/assets/mind-map.png", title: "Akiiro Map App Updates", tag: "Mind map", subtitle: "" },
   { src: "/assets/iphone-img2.png", title: "Notes and Studio features added to Akiiro App", tag: "Updates", subtitle: "" },
@@ -18,11 +18,11 @@ const works: Work[] = [
   { src: "/assets/studio-am/object-06-approved-baseline.png", title: "Studio-AM", tag: "Product", subtitle: "Coming soon. The studio, set free." },
   { src: "/assets/studio-a/object-08-move-with-your-ideas.jpeg", title: "Move with Your Ideas", tag: "Studio-A", subtitle: "" },
   { src: "/assets/macrokii/interface-dark-workspace.png", title: "Macro Kii", tag: "Macro app", subtitle: "A macro app that connects notes, tasks, tables, calendars, research, and reusable workflows inside one continuous workspace.", href: "/macrokii" },
-  { src: "/assets/macrokii/macro-panel-filled.png", title: "Macro Panel", tag: "Macro Kii", subtitle: "One quiet control point for the actions that keep work moving.", href: "/macrokii#interface" },
+  { src: "/assets/macrokii/macro-panel-filled.png", title: "Macro Panel", tag: "Macro Kii", subtitle: "One quiet control point for the actions that keep work moving.", href: "/macrokii" },
   { src: "/assets/3d.gif", title: "Design with software built to print", tag: "Akiiro 3d", subtitle: "" },
-  { src: "/assets/macrokii/details/32-trust-score-midnight-single-score.png", title: "Verify, in detail", tag: "Macro Kii / Verify", subtitle: "Review the score and the evidence behind it.", href: "/macrokii#assistance" },
-  { src: "/assets/macrokii/details/42-table-tools.png", title: "Research, structured", tag: "Macro Kii / Tables", subtitle: "Records, reviewers, and status in one working view.", href: "/macrokii#workflow-details" },
-  { src: "/assets/macrokii/details/28-agent-desktop-light.png", title: "AO, beside your work", tag: "Macro Kii / AO Agent", subtitle: "Keep the conversation close to the document.", href: "/macrokii#assistance" },
+  { src: "/assets/macrokii/details/32-trust-score-midnight-single-score.png", title: "Verify, in detail", tag: "Macro Kii / Verify", subtitle: "Review the score and the evidence behind it.", href: "/macrokii" },
+  { src: "/assets/macrokii/details/42-table-tools.png", title: "Research, structured", tag: "Macro Kii / Tables", subtitle: "Records, reviewers, and status in one working view.", href: "/macrokii" },
+  { src: "/assets/macrokii/details/28-agent-desktop-light.png", title: "AO, beside your work", tag: "Macro Kii / AO Agent", subtitle: "Keep the conversation close to the document.", href: "/macrokii" },
 ];
 
 export default function Home() {
@@ -124,7 +124,7 @@ export default function Home() {
           <p className="intro">AO Agent. Capture Intelligence.</p>
           <div className="hero-macro-links">
             <a className="hero-launch" href="https://macrokii.com" target="_blank" rel="noopener noreferrer">Launch Macro</a>
-            <a className="hero-info" href="/macrokii#interface" aria-label="Learn about the Macro Kii interface">i</a>
+            <a className="hero-info" href="/macrokii" aria-label="Learn about the Macro Kii interface">i</a>
           </div>
           <a className="macro-panel-button" href="https://macrokii.com" target="_blank" rel="noopener noreferrer" aria-label="Launch Macro">
             <img src="/assets/macro-panel-button.png" alt="" />

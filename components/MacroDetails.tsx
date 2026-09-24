@@ -10,12 +10,13 @@ const details = [
 export default function MacroDetails() {
   return (
     <section className="home-macro-details" aria-labelledby="macro-details-title">
-      <header><p>MACRO Kii / A CLOSER LOOK</p><h2 id="macro-details-title">The details make the difference.</h2><a href="/macrokii">Explore Macro Kii</a></header>
+      <header><p>MACRO Kii / A CLOSER LOOK</p><h2 id="macro-details-title">The details make the difference.</h2><a href="https://downloads.akiiro.com">Download Macro Kii</a></header>
       <div className="home-macro-details-grid">
-        {details.map(([file, label, title, description, anchor]) => (
-          <a href={`/macrokii#${anchor}`} key={file}>
+        {details.map(([file, label, title, description]) => (
+          <a href="/macrokii" key={file}>
             <img src={`/assets/macrokii/details/${file}`} width={label === "Verify" ? 1242 : 2752} height={label === "Verify" ? 2688 : 2064} alt={`${label}: enlarged feature detail alongside the app`} loading="lazy" />
             <div><small>{label}</small><h3>{title}</h3><p>{description}</p></div>
+            {label === "Tables" && <div className="home-table-detail"><small>FROM RECORDS TO NEXT STEPS</small><h3>Keep the whole picture in view.</h3><p>Review the record. See its status. Organize the next step without losing the context.</p><img src="/assets/macrokii/details/18-calendar-ipad-light.png" width="2752" height="2064" alt="Macro Kii calendar on iPad, showing dated work in context" loading="lazy" /></div>}
           </a>
         ))}
       </div>
