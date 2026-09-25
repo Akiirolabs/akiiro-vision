@@ -159,6 +159,29 @@ main {
   margin: 1em 2em 0 .4em;
 }
 
+.home-intro-sections {
+  display: contents;
+}
+
+@media (max-width: 800px) {
+  .home-intro-sections {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-intro-sections > .header-visual {
+    order: -3;
+  }
+
+  .home-intro-sections > .hero {
+    order: -2;
+  }
+
+  .home-intro-sections > .manifesto {
+    order: -1;
+  }
+}
+
 .header-visual {
   position: relative;
   width: 100%;

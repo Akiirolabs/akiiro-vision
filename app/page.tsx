@@ -90,6 +90,7 @@ export default function Home() {
         ))}
       </aside>
 
+      <div className="home-intro-sections">
       <section className="header-visual" id="top" aria-label="Akiiro software without limits">
         <img src="/og-software.png" alt="Akiiro: Software without limits" />
         <span className="header-studio">Studio</span>
@@ -151,6 +152,8 @@ export default function Home() {
         <h2>Built for the way your mind <span>actually moves.</span></h2>
         <div className="manifesto-note">A living field where ideas recognize each other.</div>
       </section>
+
+      </div>
 
       <section className="objects" id="objects">
         <div className="section-label light">02 / Selected objects</div>
