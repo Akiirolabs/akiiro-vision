@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import "./macro-motion.css";
 
-export default function MacroMotion() {
+export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-icons.mp4", downloadLabel = "Download Macro Kii" }: { src?: string; downloadLabel?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -34,9 +34,9 @@ export default function MacroMotion() {
           poster="/assets/macrokii/macro-panel-hero-outline.png"
           aria-label="Macro controls rotating around a glowing blue sphere"
         >
-          <source src="/assets/macrokii/glowing-sphere-icons.mp4" type="video/mp4" />
+          <source src={src} type="video/mp4" />
         </video>
-        <a className="macro-motion-download" href="/downloads">Download Macro Kii</a>
+        <a className="macro-motion-download" href="/downloads">{downloadLabel}</a>
       </div>
     </section>
   );

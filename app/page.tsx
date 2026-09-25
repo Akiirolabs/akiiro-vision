@@ -92,12 +92,13 @@ export default function Home() {
       </aside>
 
       <div className="home-intro-sections">
-      <MacroMotion />
+      <MacroMotion downloadLabel="Download" />
 
       <section className="connectivity-feature" aria-label="Studio-A connectivity">
         <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
         <p>Built to connect. Designed to arrive.</p>
         <p className="connectivity-model">Studio A / White</p>
+        <a className="connectivity-order" href={checkoutUrl} target="_blank" rel="noopener noreferrer">Order now</a>
       </section>
 
       <MacroPromo />

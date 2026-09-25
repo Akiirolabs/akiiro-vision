@@ -105,7 +105,7 @@ export default function MacroKiiPage() {
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
       </header>
 
-      <MacroMotion />
+      <MacroMotion src="/assets/macrokii/home-glowing-sphere-icons.mp4" />
 
       <section className="mk-intro" id="experience">
         <div className="mk-section-label">01 / THE CENTER</div>
