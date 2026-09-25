@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import MacroPromo from "../components/MacroPromo";
 import MacroDetails from "../components/MacroDetails";
+import MacroMotion from "../components/MacroMotion";
 
 const checkoutUrl = "https://buy.stripe.com/14AbJ3874afa4n182mc3m01";
 
@@ -61,13 +62,13 @@ export default function Home() {
   ];
 
   return (
-    <main onPointerMove={(event) => setCursor({
+    <main id="top" onPointerMove={(event) => setCursor({
       x: (event.clientX / window.innerWidth) * 100,
       y: (event.clientY / window.innerHeight) * 100,
     })}>
       <div className="ambient" style={{ "--x": `${cursor.x}%`, "--y": `${cursor.y}%` } as React.CSSProperties} />
 
-      <nav className="nav">
+      <nav className="nav home-motion-nav">
         <a className="wordmark" href="#top" aria-label="Akiiro Vision home">AKIIRO<span>®</span></a>
         <div className="nav-center">Independent intelligence / 2026</div>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}>
@@ -91,15 +92,7 @@ export default function Home() {
       </aside>
 
       <div className="home-intro-sections">
-      <section className="header-visual" id="top" aria-label="Akiiro software without limits">
-        <img src="/og-software.png" alt="Akiiro: Software without limits" />
-        <span className="header-studio">Studio</span>
-
-        <div className="home-download">
-  <a href="/downloads">Download Macro Kii</a>
-</div>
-      </section>
-
+      <MacroMotion />
 
       <section className="connectivity-feature" aria-label="Studio-A connectivity">
         <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
@@ -121,6 +114,14 @@ export default function Home() {
           <img className="deck-teaser-photo" src="/assets/studio-a/front-cover-composite.png" alt="Black Studio-A monitor secured inside its protective sleeve" />
         </div>
       </a>
+
+      <section className="header-visual" aria-label="Akiiro software without limits">
+        <img src="/og-software.png" alt="Akiiro: Software without limits" />
+        <span className="header-studio">Studio</span>
+        <div className="home-download">
+          <a href="/downloads">Download Macro Kii</a>
+        </div>
+      </section>
 
       <section className="hero">
         <div className="hero-meta"><span>NEW YORK / {clock}</span><span>SCROLL TO DISCOVER ↓</span></div>

@@ -55,7 +55,23 @@
 .mk-primary { padding: 14px 18px; border: 1px solid rgba(84,199,255,.68); border-radius: 999px; box-shadow: 0 0 24px rgba(84,199,255,.13); transition: background .2s,color .2s,box-shadow .2s; }
 .mk-primary:hover,.mk-primary:focus-visible { background: var(--mk-blue); color: #031018; box-shadow: 0 0 32px rgba(84,199,255,.45); }
 .mk-hero-visual { display: grid; justify-items: center; gap: 30px; }
-.mk-hero-visual img { width: min(29vw,390px); height: auto; filter: drop-shadow(0 0 30px rgba(84,199,255,.42)); }
+.mk-hero-visual img { position: relative; width: min(38vw,540px); max-width: 100%; height: auto; filter: drop-shadow(0 0 22px rgba(50,164,255,.55)); }
+.mk-hero-visual .mk-panel-download { position: relative; isolation: isolate; max-width: 100%; }
+.mk-hero-visual .mk-panel-download::before {
+  content: "";
+  position: absolute;
+  inset: 10% 16%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(41,152,255,.45), rgba(18,105,240,.24) 50%, transparent 72%);
+  filter: blur(22px);
+  pointer-events: none;
+  animation: mk-hero-blue-glow 7s ease-in-out infinite alternate;
+}
+@keyframes mk-hero-blue-glow {
+  from { transform: translate(-7px, 3px) scale(.97); opacity: .65; }
+  to { transform: translate(7px, -5px) scale(1.08); opacity: 1; }
+}
 .mk-hero-visual figcaption,.mk-gallery figcaption,.mk-agent-media figcaption,.mk-proof-panel figcaption { font: 9px var(--font-mono); letter-spacing: .13em; text-transform: uppercase; color: rgba(235,243,248,.55); }
 .mk-hero-index { position: absolute; left: 4.5vw; right: 4.5vw; bottom: 28px; display: flex; justify-content: space-between; font: 9px var(--font-mono); letter-spacing: .12em; }
 
@@ -184,7 +200,7 @@
   .mk-hero-copy>p,.mk-actions { margin-left: 0; }
   .mk-hero-copy>p { margin-top: 46px; font-size: 16px; }
   .mk-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
-  .mk-hero-visual img { width: min(68vw,300px); }
+  .mk-hero-visual img { width: min(88vw,420px); }
   .mk-hero-index { display: none; }
   .mk-intro,.mk-workspace,.mk-agent,.mk-difference,.mk-use-cases,.mk-evidence,.mk-faq,.mk-interface { padding: 90px 20px; }
   .mk-intro { grid-template-columns: 1fr; gap: 42px; }
@@ -222,5 +238,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .mk-hero-visual .mk-panel-download::before { animation: none; }
   .mk-page * { scroll-behavior: auto!important; transition: none!important; }
 }

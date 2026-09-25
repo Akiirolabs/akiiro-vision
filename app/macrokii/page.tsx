@@ -3,6 +3,7 @@ import "./macrokii.css";
 import "./pro.css";
 import MacroInterface from "./MacroInterface";
 import MacroDesktopDetails from "./MacroDesktopDetails";
+import MacroMotion from "../../components/MacroMotion";
 
 export const metadata: Metadata = {
   title: "Macro Kii: A Macro-Powered Workspace | Akiiro",
@@ -98,11 +99,13 @@ export default function MacroKiiPage() {
           </div>
         </div>
         <figure className="mk-hero-visual">
-          <a className="mk-panel-download" href="/downloads" aria-label="Download Macro Kii"><img src="/assets/macrokii/macro-panel-filled.png" width="218" height="240" alt="Teal-toned Macro Kii circular Macro Panel with six workflow controls" /></a>
+          <a className="mk-panel-download" href="/downloads" aria-label="Download Macro Kii"><img src="/assets/macrokii/macro-panel-hero-outline.png" width="221" height="183" alt="Macro Kii circular Macro Panel with a teal center and six workflow controls" /></a>
           <figcaption>The Macro Panel / one control point for the workspace</figcaption>
         </figure>
         <div className="mk-hero-index"><span>01</span><span>MACRO KII</span></div>
       </header>
+
+      <MacroMotion />
 
       <section className="mk-intro" id="experience">
         <div className="mk-section-label">01 / THE CENTER</div>

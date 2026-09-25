@@ -163,23 +163,17 @@ main {
   display: contents;
 }
 
-@media (max-width: 800px) {
-  .home-intro-sections {
-    display: flex;
-    flex-direction: column;
-  }
+.home-motion-nav {
+  color: #f1f0ea;
+  border-bottom-color: rgba(255,255,255,.15);
+}
 
-  .home-intro-sections > .header-visual {
-    order: -3;
-  }
+.home-motion-nav .menu-button i {
+  background: currentColor;
+}
 
-  .home-intro-sections > .hero {
-    order: -2;
-  }
-
-  .home-intro-sections > .manifesto {
-    order: -1;
-  }
+.home-intro-sections > .macro-motion:first-child {
+  padding-top: 110px;
 }
 
 .header-visual {
