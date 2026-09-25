@@ -95,6 +95,10 @@ export default function Home() {
         <span className="header-studio">Studio</span>
       </section>
 
+      <div className="home-download">
+  <a href="/downloads">Download Macro Kii</a>
+</div>
+
       <section className="connectivity-feature" aria-label="Studio-A connectivity">
         <img src="/assets/studio-a/object-05-connectivity.jpeg" alt="Studio-A connectivity panel with HDMI, USB-C, power, and camera connections" />
         <p>Built to connect. Designed to arrive.</p>
