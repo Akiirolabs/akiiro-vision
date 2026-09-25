@@ -1,0 +1,18 @@
+.mk-pro { padding: clamp(48px, 7vw, 100px) 6vw; background: #030405; color: #f0f4f6; }
+.mk-pro .mk-section-label, .mk-pro figcaption > span { color: #77cfff; }
+.mk-pro-heading { max-width: 760px; margin: 28px 0 40px; }
+.mk-pro .mk-pro-heading h2 { margin: 0 0 20px; font-size: clamp(36px, 5vw, 72px); font-weight: 500; line-height: 1.05; letter-spacing: -.045em; }
+.mk-pro-heading p, .mk-pro figcaption p { color: #a8b6c0; line-height: 1.7; max-width: 54ch; }
+.mk-pro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.mk-pro figure { margin: 0; min-width: 0; }
+.mk-pro-image { display: grid; place-items: center; background: #000; border-radius: 20px; min-height: 290px; }
+.mk-pro-image img { width: min(100%, 353px); height: auto; }
+.mk-pro figcaption { padding: 26px 0 0; }
+.mk-pro figcaption > span { font: 10px var(--font-mono), monospace; letter-spacing: .16em; }
+.mk-pro h3 { margin: 12px 0; font-size: clamp(23px, 2.4vw, 32px); font-weight: 500; letter-spacing: -.03em; }
+.mk-pro-download { display: inline-block; margin-top: 30px; padding: 14px 24px; border: 1px solid #697e8c; border-radius: 999px; color: #f0f4f6; }
+.mk-pro-download:hover, .mk-pro-download:focus-visible { border-color: #77cfff; box-shadow: 0 0 20px #329bdb33; }
+@media (max-width: 700px) {
+  .mk-pro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .mk-pro-image { min-height: 0; padding: 12px 0; }
+}

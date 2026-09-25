@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./macrokii.css";
+import "./pro.css";
 import MacroInterface from "./MacroInterface";
 import MacroDesktopDetails from "./MacroDesktopDetails";
 
@@ -116,6 +117,25 @@ export default function MacroKiiPage() {
             <span>Download Macro K<span className="mk-lowercase">ii</span></span>
           </a>
         </div>
+      </section>
+
+      <section className="mk-pro" id="pro" aria-labelledby="mk-pro-title">
+        <div className="mk-section-label">MACRO KII / PRO</div>
+        <div className="mk-pro-heading">
+          <h2 id="mk-pro-title">More within reach.</h2>
+          <p>Two ways to go further with Macro Kii Pro. Bring more controls into your panel, then expand your macros without leaving the work.</p>
+        </div>
+        <div className="mk-pro-grid">
+          <figure>
+            <div className="mk-pro-image"><img src="/assets/macrokii/pro-macro-panel.png" width="353" height="267" loading="lazy" alt="Pro Macro Panel with an extended ring of controls around the central orb" /></div>
+            <figcaption><span>PRO ONLY</span><h3>The Pro Macro Panel.</h3><p>More controls, gathered around one center. This Macro Panel is available exclusively with Macro Kii Pro.</p></figcaption>
+          </figure>
+          <figure>
+            <div className="mk-pro-image"><img src="/assets/macrokii/pro-expanded-macro.png" width="353" height="267" loading="lazy" alt="Pro Macro Panel with expanded macro actions displayed beside the circular panel" /></div>
+            <figcaption><span>PRO ONLY</span><h3>Expand the possibilities.</h3><p>Reveal additional macro actions beside the panel. Expanded macros are another exclusive feature of Macro Kii Pro.</p></figcaption>
+          </figure>
+        </div>
+        <a className="mk-pro-download" href="/downloads">Download Macro Kii</a>
       </section>
 
       <section className="mk-proof-panel">
