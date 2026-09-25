@@ -117,7 +117,7 @@ export default function Home() {
       </a>
 
       <section className="header-visual" aria-label="Akiiro software without limits">
-        <img src="/og-software.png" alt="Akiiro: Software without limits" />
+        <img src="/og-software-white.png" alt="Akiiro: Software without limits" />
         <span className="header-studio">Studio</span>
         <div className="home-download">
           <a href="/downloads">Download Macro Kii</a>
