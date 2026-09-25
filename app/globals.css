@@ -202,6 +202,30 @@ main {
   outline-offset: 5px;
 }
 
+.mobile-studio-order { display: none; }
+
+@media (max-width: 800px) {
+  .connectivity-feature .connectivity-order { display: none; }
+  .mobile-studio-order {
+    display: block;
+    padding: 16px 20px;
+    background: #05070a;
+  }
+  .mobile-studio-order a {
+    display: inline-block;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: #54c7ff;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .mobile-studio-order a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+}
+
 @media (max-width: 600px) {
   .home-intro-sections .macro-motion-download {
     bottom: 0;

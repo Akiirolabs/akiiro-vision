@@ -102,6 +102,9 @@ export default function Home() {
       </section>
 
       <MacroPromo />
+      <div className="mobile-studio-order">
+        <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">Order now</a>
+      </div>
       <MacroDetails />
 
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
