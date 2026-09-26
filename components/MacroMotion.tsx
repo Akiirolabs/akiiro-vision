@@ -21,7 +21,7 @@ export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-ico
 
   return (
     <section className="macro-motion" aria-label="Macro Kii in motion">
-      <div className="macro-motion-label">Macro KII available now</div>
+      <div className="macro-motion-label">Macro Kii available now</div>
       <div className="macro-motion-stage">
         <video
           ref={videoRef}
