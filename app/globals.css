@@ -207,7 +207,10 @@ main {
 @media (max-width: 800px) {
   .home-studio-promo {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .home-studio-promo > .connectivity-feature {
+    order: 1;
   }
   .connectivity-feature .connectivity-order {
     border: 0;

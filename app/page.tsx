@@ -103,8 +103,8 @@ export default function Home() {
       </section>
 
       <MacroPromo />
-      </div>
       <MacroDetails />
+      </div>
 
       <a className="deck-teaser" href="/cyberdecks" aria-label="Explore the Studio-A cyberdeck">
         <div className="deck-teaser-copy">
