@@ -173,7 +173,29 @@ main {
 }
 
 .home-intro-sections > .macro-motion:first-child {
-  padding-top: 110px;
+  position: relative;
+  height: 100svh;
+  min-height: 420px;
+  padding: 0;
+  display: block;
+}
+
+.home-intro-sections > .macro-motion:first-child .macro-motion-label {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.home-intro-sections > .macro-motion:first-child .macro-motion-stage {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.home-intro-sections > .macro-motion:first-child .macro-motion-download {
+  bottom: max(28px, env(safe-area-inset-bottom));
 }
 
 .home-intro-sections .macro-motion-download {
