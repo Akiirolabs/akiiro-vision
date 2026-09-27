@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import "./macro-motion.css";
 
-export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-icons.mp4", downloadLabel = "Download Macro Kii" }: { src?: string; downloadLabel?: string }) {
+export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-icons.mp4", downloadLabel = "Download Macro Kii", minimal = false }: { src?: string; downloadLabel?: string; minimal?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-ico
   }, []);
 
   return (
-    <section className="macro-motion" aria-label="Macro Kii in motion">
-      <div className="macro-motion-label">Macro Kii available now</div>
+    <section className={`macro-motion${minimal ? " macro-motion-minimal" : ""}`} aria-label="Macro Kii in motion">
+      {!minimal && <div className="macro-motion-label">Macro Kii available now</div>}
       <div className="macro-motion-stage">
         <video
           ref={videoRef}

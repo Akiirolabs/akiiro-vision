@@ -49,6 +49,7 @@
 }
 .macro-motion-download:hover { border-color: #72c7ff; color: #fff; }
 .macro-motion-download:focus-visible { outline: 2px solid #72c7ff; outline-offset: 4px; }
+.macro-motion-minimal .macro-motion-download { border: 0; }
 @media (max-width: 600px) {
   .macro-motion-download { padding: 10px 16px; font-size: 10px; }
 }
