@@ -92,7 +92,7 @@ export default function Home() {
       </aside>
 
       <div className="home-intro-sections">
-      <MacroMotion src="/assets/macrokii/home-blue-menu.mp4" downloadLabel="Download" />
+      <MacroMotion downloadLabel="Download" />
 
       <div className="home-studio-promo">
       <section className="connectivity-feature" aria-label="Studio-A connectivity">

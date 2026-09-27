@@ -255,6 +255,8 @@ export default function MacroKiiPage() {
         </div>
       </section>
 
+      <MacroMotion src="/assets/macrokii/home-blue-menu.mp4" />
+
       <footer className="mk-footer">
         <span>MACRO KII / AO</span>
         <h2>Build the flow once.<br /><em>Keep the work moving.</em></h2>
