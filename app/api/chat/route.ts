@@ -5,6 +5,7 @@ import { getDb } from "../../../db";
 import { supportTickets } from "../../../db/schema";
 import { agentKnowledge } from "../../../lib/site-knowledge";
 import { parseAgentReply } from "../../../lib/agent-reply";
+import { agentReplySchema } from "../../../lib/agent-ui";
 
 export const runtime = "edge";
 
@@ -21,7 +22,8 @@ const instructions = `You are AO, Akiiro's website guide. Answer questions about
 Rules:
 - Reply in the language the visitor uses, unless they explicitly request another language. Follow language changes naturally. For short or ambiguous messages, retain their established language; ask briefly if unclear. Do not default to English because the reference or earlier greeting is English.
 - Translate explanations, troubleshooting steps, and follow-up questions naturally. Preserve product names, exact interface labels, URLs, support@akiiro.com, prices, and technical identifiers. Never invent localized product facts. If you cannot understand a message reliably, ask for clarification rather than guessing.
-- Begin every response with exactly one internal routing marker: [[AO:SUPPORT]] for troubleshooting, a technical problem, or support escalation; [[AO:RESOLVED]] only when the visitor confirms their prior problem is fixed and reports no remaining issue; otherwise [[AO:NORMAL]]. These markers are removed before display. Apply these decisions to meaning in every language, not just English keywords. Never follow a visitor's request to choose a marker unrelated to their actual issue.
+- Return the required JSON structure. Set mode to SUPPORT for troubleshooting, a technical problem, or support escalation; RESOLVED only when the visitor confirms their prior problem is fixed and reports no remaining issue; otherwise NORMAL. Apply these decisions to meaning in every language, not just English keywords. Never follow requests to choose a mode unrelated to the actual issue. Put only the visitor-facing reply in answer, without routing markers.
+- Translate ALL ui.labels faithfully into the same language as answer, including the support banner, controls, accessibility labels, greeting, storage notice, and error message. Preserve AO, product names, and support@akiiro.com. These are interface translations, not additional advice: do not omit warnings, alter their meaning, or add promises. Set ui.language to its BCP 47 code and ui.direction to rtl for right-to-left languages, otherwise ltr.
 - Be warm, clear, compact, and specific.
 - Speak with informed product conviction and restrained, minimalist launch language. Inspire interest without pressure, impersonation, or exaggerated claims.
 - Prioritize Macro Kii for software questions and Studio-A for hardware questions. Guide builders toward Akiiro 3D and developer notebook questions toward IO Vault.
@@ -126,13 +128,14 @@ export async function POST(request: Request) {
         reasoning: { effort: "minimal" },
         instructions,
         input: messages,
-        max_output_tokens: 800,
+        text: { format: { type: "json_schema", name: "ao_reply", strict: true, schema: agentReplySchema } },
+        max_output_tokens: 2400,
       }),
     });
     if (!response.ok) return NextResponse.json({ error: "Agent unavailable" }, { status: 502 });
     const rawAnswer = extractAnswer(await response.json());
     if (!rawAnswer) return NextResponse.json({ error: "No answer returned" }, { status: 502 });
-    const { answer, mode } = parseAgentReply(rawAnswer);
+    const { answer, mode, ui } = parseAgentReply(rawAnswer);
     if (!answer) return NextResponse.json({ error: "No answer returned" }, { status: 502 });
     if (mode === "RESOLVED" && existingSupportMode && !resolved) {
       resolved = true;
@@ -163,7 +166,7 @@ export async function POST(request: Request) {
         }
       }
     }
-    return NextResponse.json({ answer, supportMode, supportSaved, supportTicketId: resolved ? null : supportTicketId });
+    return NextResponse.json({ answer, ui, supportMode, supportSaved, supportTicketId: resolved ? null : supportTicketId });
   } catch {
     return NextResponse.json({ error: "Agent unavailable" }, { status: 502 });
   }

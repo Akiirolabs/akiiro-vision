@@ -1322,3 +1322,13 @@ main {
 .home-download a:focus-visible {
   box-shadow: 0 0 24px rgba(150, 210, 255, 0.55);
 }
+
+/* Keep translated chat controls readable, including right-to-left scripts. */
+.ak-agent-panel textarea { min-width: 0; }
+.ak-agent-panel header div { min-width: 0; }
+.ak-agent-panel header span { line-height: 1.4; }
+.ak-agent[dir="rtl"] .ak-agent-message.user { margin-left: 0; margin-right: auto; }
+.ak-agent[dir="rtl"] .ak-agent-message span { border-radius: 14px 14px 3px 14px; }
+.ak-agent[dir="rtl"] .ak-agent-message.user span { border-radius: 14px 14px 14px 3px; }
+.ak-agent[dir="rtl"] .ak-support-ticker { direction: ltr; }
+.ak-agent[dir="rtl"] .ak-support-ticker span { direction: rtl; }

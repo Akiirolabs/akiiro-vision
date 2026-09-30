@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { defaultAgentUI, isAgentUI, type AgentUI } from "../lib/agent-ui";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -17,6 +18,8 @@ const greeting: ChatMessage = {
 
 export default function AkiiroAgent() {
   const [open, setOpen] = useState(false);
+  const [ui, setUI] = useState<AgentUI>(defaultAgentUI);
+  const labels = ui.labels;
   const [messages, setMessages] = useState<ChatMessage[]>([greeting]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -56,9 +59,11 @@ export default function AkiiroAgent() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: nextMessages.slice(1), supportMode, supportTicketId }),
       });
-      const data = (await response.json()) as { answer?: string; error?: string; supportMode?: boolean; supportSaved?: boolean; supportTicketId?: string | null };
-      if (!response.ok || !data.answer) throw new Error(data.error || "Chat request failed");
+      const data = (await response.json()) as { answer?: string; ui?: unknown; error?: string; supportMode?: boolean; supportSaved?: boolean; supportTicketId?: string | null };
+      if (!response.ok || !data.answer || !isAgentUI(data.ui)) throw new Error(data.error || "Chat request failed");
+      setUI(data.ui);
       setSupportMode(Boolean(data.supportMode));
+      if (data.supportTicketId === null) setSupportTicketId(null);
       if (data.supportTicketId) setSupportTicketId(data.supportTicketId);
       if (data.supportMode) {
         setSupportStatus(data.supportSaved ? "saved" : "failed");
@@ -70,7 +75,7 @@ export default function AkiiroAgent() {
     } catch {
       setMessages((current) => [...current, {
         role: "assistant",
-        content: "I’m not available at the moment. Please try again shortly or email support@akiiro.com.",
+        content: labels.unavailable,
       }]);
     } finally {
       setLoading(false);
@@ -78,32 +83,32 @@ export default function AkiiroAgent() {
   }
 
   return (
-    <aside className={`ak-agent ${supportMode ? "is-support" : ""}`} aria-label="Ask AO">
+    <aside className={`ak-agent ${supportMode ? "is-support" : ""}`} aria-label={labels.askAO} lang={ui.language} dir={ui.direction}>
       {open && (
-        <section className="ak-agent-panel" id="ak-agent-panel" aria-label="Akiiro live agent chat">
-          {supportMode && <div className="ak-support-ticker" aria-live="polite"><span>TECH SUPPORT MODE / TECH SUPPORT MODE / TECH SUPPORT MODE /</span></div>}
+        <section className="ak-agent-panel" id="ak-agent-panel" aria-label={labels.chatLabel}>
+          {supportMode && <div className="ak-support-ticker" aria-live="polite"><span>{`${labels.supportBanner} / `.repeat(3)}</span></div>}
           <header>
-            <div><span>{supportMode ? "AO / TECH SUPPORT" : "AO / LIVE"}</span><strong>{supportMode ? "Technical Support" : "Ask AO"}</strong></div>
-            <button type="button" onClick={() => setOpen(false)} aria-label="Close chat">×</button>
+            <div><span>{supportMode ? labels.supportStatus : labels.liveStatus}</span><strong>{supportMode ? labels.supportTitle : labels.askAO}</strong></div>
+            <button type="button" onClick={() => setOpen(false)} aria-label={labels.closeChat}>×</button>
           </header>
           <div className="ak-agent-messages" aria-live="polite">
             {messages.map((message, index) => (
               <p key={`${message.role}-${index}`} className={`ak-agent-message ${message.role}`}>
-                <small>{message.role === "assistant" ? "AO" : "YOU"}</small>
-                <span dir="auto">{message.content}</span>
+                <small>{message.role === "assistant" ? "AO" : labels.you}</small>
+                <span dir="auto">{index === 0 ? labels.greeting : message.content}</span>
               </p>
             ))}
-            {loading && <p className="ak-agent-thinking">AO is thinking<span>...</span></p>}
+            {loading && <p className="ak-agent-thinking">{labels.thinking}<span>...</span></p>}
             <div ref={endRef} />
           </div>
           <form onSubmit={submit}>
-            <label htmlFor="ak-agent-input">Ask a question</label>
+            <label htmlFor="ak-agent-input">{labels.question}</label>
             <textarea
               dir="auto"
               id="ak-agent-input"
               value={input}
               onChange={(event) => setInput(event.target.value.slice(0, 1500))}
-              placeholder="What would you like to know?"
+              placeholder={labels.placeholder}
               rows={2}
               disabled={loading}
               onKeyDown={(event) => {
@@ -113,10 +118,10 @@ export default function AkiiroAgent() {
                 }
               }}
             />
-            <button type="submit" disabled={loading || !input.trim()}>Send</button>
+            <button type="submit" disabled={loading || !input.trim()}>{labels.send}</button>
           </form>
-          {supportMode && supportStatus === "saved" && <p className="ak-support-status">Support record saved. A human has not reviewed it yet.</p>}
-          <p className="ak-agent-note">AI can make mistakes. Do not share sensitive information.</p>
+          {supportMode && supportStatus === "saved" && <p className="ak-support-status">{labels.saved}</p>}
+          <p className="ak-agent-note">{labels.disclaimer}</p>
         </section>
       )}
       <button
@@ -125,10 +130,10 @@ export default function AkiiroAgent() {
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-controls="ak-agent-panel"
-        aria-label={open ? "Close AO agent" : "Open AO agent"}
+        aria-label={open ? labels.closeAgent : labels.openAgent}
       >
         <img src="/assets/agent-orb.png" alt="" />
-        <span>Ask AO</span>
+        <span>{labels.askAO}</span>
       </button>
     </aside>
   );

@@ -1,7 +1,10 @@
+import { isAgentUI } from "./agent-ui";
+
 export function parseAgentReply(raw: string) {
-  const marker = raw.match(/^\s*\[\[AO:(SUPPORT|RESOLVED|NORMAL)\]\]\s*/);
-  return {
-    mode: marker?.[1] ?? null,
-    answer: raw.replace(/\[\[AO:(?:SUPPORT|RESOLVED|NORMAL)\]\]/g, "").trim(),
-  };
+  const parsed = JSON.parse(raw);
+  if (!parsed || !["SUPPORT", "RESOLVED", "NORMAL"].includes(parsed.mode)
+    || typeof parsed.answer !== "string" || !parsed.answer.trim() || !isAgentUI(parsed.ui)) {
+    throw new Error("Invalid agent reply");
+  }
+  return { mode: parsed.mode as "SUPPORT" | "RESOLVED" | "NORMAL", answer: parsed.answer.trim(), ui: parsed.ui };
 }
