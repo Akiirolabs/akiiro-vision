@@ -90,7 +90,7 @@ export default function AkiiroAgent() {
             {messages.map((message, index) => (
               <p key={`${message.role}-${index}`} className={`ak-agent-message ${message.role}`}>
                 <small>{message.role === "assistant" ? "AO" : "YOU"}</small>
-                <span>{message.content}</span>
+                <span dir="auto">{message.content}</span>
               </p>
             ))}
             {loading && <p className="ak-agent-thinking">AO is thinking<span>...</span></p>}
@@ -99,6 +99,7 @@ export default function AkiiroAgent() {
           <form onSubmit={submit}>
             <label htmlFor="ak-agent-input">Ask a question</label>
             <textarea
+              dir="auto"
               id="ak-agent-input"
               value={input}
               onChange={(event) => setInput(event.target.value.slice(0, 1500))}
