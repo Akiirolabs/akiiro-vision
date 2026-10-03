@@ -1,59 +1,41 @@
-// Retry when media becomes ready or the page resumes, without a polling loop.
-export function attachMotionPlayback(
-  video: HTMLVideoElement,
-  preference: MediaQueryList,
-  page: Document,
-  host: Window,
-  setNeedsPlay: (needed: boolean) => void,
-) {
+// Native autoplay starts before hydration; these events recover interrupted starts.
+export function attachMotionPlayback(video: HTMLVideoElement, page: Document, host: Window) {
   let disposed = false;
   let pending = false;
-  let manual = false;
-  const play = async (userInitiated = false) => {
-    if (userInitiated) manual = true;
-    if (disposed || pending || page.hidden || (preference.matches && !manual)) return;
+  let visible = true;
+  const resume = async () => {
+    if (disposed || pending || page.hidden || !visible) return;
     video.muted = true;
     video.defaultMuted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
     pending = true;
-    try {
-      await video.play();
-      if (!disposed) setNeedsPlay(false);
-    } catch {
-      if (!disposed) setNeedsPlay(true);
-    } finally {
-      pending = false;
-    }
+    try { await video.play(); }
+    catch { /* Browser policy may block playback; retry on readiness or interaction. */ }
+    finally { pending = false; }
   };
-  const resume = () => { void play(); };
-  const updatePreference = () => {
-    manual = false;
-    video.autoplay = !preference.matches;
-    if (preference.matches) {
-      video.pause();
-      setNeedsPlay(true);
-    } else resume();
-  };
-  const playing = () => { setNeedsPlay(false); };
-  const paused = () => { if (!page.hidden) setNeedsPlay(true); };
-  video.addEventListener("canplay", resume);
-  video.addEventListener("playing", playing);
-  video.addEventListener("pause", paused);
-  video.addEventListener("error", paused);
-  page.addEventListener("visibilitychange", resume);
-  host.addEventListener("pageshow", resume);
-  preference.addEventListener("change", updatePreference);
-  updatePreference();
-  return {
-    play: () => play(true),
-    dispose: () => {
-      disposed = true;
-      video.removeEventListener("canplay", resume);
-      video.removeEventListener("playing", playing);
-      video.removeEventListener("pause", paused);
-      video.removeEventListener("error", paused);
-      page.removeEventListener("visibilitychange", resume);
-      host.removeEventListener("pageshow", resume);
-      preference.removeEventListener("change", updatePreference);
-    },
-  };
+  const retry = () => { void resume(); };
+  const mediaEvents = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough", "ended"];
+  for (const event of mediaEvents) video.addEventListener(event, retry);
+  page.addEventListener("visibilitychange", retry);
+  host.addEventListener("pageshow", retry);
+  // No dedicated Play button: a normal page interaction can recover blocked playback.
+  page.addEventListener("touchend", retry, { passive: true });
+  page.addEventListener("click", retry);
+  const observer = typeof IntersectionObserver !== "undefined" ? new IntersectionObserver(entries => {
+    visible = entries.some(entry => entry.isIntersecting);
+    if (visible) retry();
+  }) : null;
+  observer?.observe(video);
+  retry();
+  return { dispose: () => {
+    disposed = true;
+    observer?.disconnect();
+    for (const event of mediaEvents) video.removeEventListener(event, retry);
+    page.removeEventListener("visibilitychange", retry);
+    host.removeEventListener("pageshow", retry);
+    page.removeEventListener("touchend", retry);
+    page.removeEventListener("click", retry);
+  } };
 }

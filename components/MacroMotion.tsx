@@ -1,23 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { attachMotionPlayback } from "../lib/motion-playback";
 import "./macro-motion.css";
 
 export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-icons.mp4", downloadLabel = "Download Macro Kii", minimal = false }: { src?: string; downloadLabel?: string; minimal?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const playbackRef = useRef<ReturnType<typeof attachMotionPlayback> | null>(null);
-  const [needsPlay, setNeedsPlay] = useState(false);
+  const playbackSrc = src === "/assets/macrokii/glowing-sphere-icons.mp4"
+    ? "/assets/macrokii/glowing-sphere-icons-silent.mp4" : src;
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const playback = attachMotionPlayback(video, window.matchMedia("(prefers-reduced-motion: reduce)"), document, window, setNeedsPlay);
-    playbackRef.current = playback;
-    return () => {
-      playback.dispose();
-      playbackRef.current = null;
-    };
+    const playback = attachMotionPlayback(video, document, window);
+    return () => playback.dispose();
   }, [src]);
 
   return (
@@ -27,6 +23,7 @@ export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-ico
         <video
           key={src}
           ref={videoRef}
+          autoPlay
           muted
           loop
           playsInline
@@ -36,9 +33,8 @@ export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-ico
           poster={src.replace(/\.mp4$/, "-poster.jpg")}
           aria-label="Macro controls rotating around a glowing blue sphere"
         >
-          <source src={src} type="video/mp4" />
+          <source src={playbackSrc} type="video/mp4" />
         </video>
-        {needsPlay && <button className="macro-motion-play" type="button" onClick={() => void playbackRef.current?.play()} aria-label="Play Macro Kii video">Play video</button>}
         <a className="macro-motion-download" href="/downloads">{downloadLabel}</a>
       </div>
     </section>

@@ -48,21 +48,6 @@
   text-decoration: none;
 }
 .macro-motion-download:hover { border-color: #72c7ff; color: #fff; }
-.macro-motion-play {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 999px;
-  padding: 12px 20px;
-  background: rgba(0,0,0,.7);
-  color: #fff;
-  font: inherit;
-  cursor: pointer;
-}
-.macro-motion-play:focus-visible { outline: 2px solid #72c7ff; outline-offset: 4px; }
 .macro-motion-download:focus-visible { outline: 2px solid #72c7ff; outline-offset: 4px; }
 .macro-motion-minimal .macro-motion-download { border: 0; }
 @media (max-width: 600px) {
