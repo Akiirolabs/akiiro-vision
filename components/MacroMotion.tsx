@@ -7,7 +7,7 @@ import "./macro-motion.css";
 export default function MacroMotion({ src = "/assets/macrokii/glowing-sphere-icons.mp4", downloadLabel = "Download Macro Kii", minimal = false }: { src?: string; downloadLabel?: string; minimal?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const playbackSrc = src === "/assets/macrokii/glowing-sphere-icons.mp4"
-    ? "/assets/macrokii/glowing-sphere-icons-silent.mp4" : src;
+    ? "/media/macro-hero-v2.mp4" : src;
 
   useEffect(() => {
     const video = videoRef.current;
